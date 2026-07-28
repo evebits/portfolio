@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"></link>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&family=Barlow+Semi+Condensed:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"></link>
+  <style>
+    body{margin:0;-webkit-font-smoothing:antialiased}
+    a{color:#E11D4F}
+    a:hover{color:#F2672A}
+  </style>
+  <script src="./image-slot.js"></script>
+</helmet>
+
+<div style="--ff-body:'Mulish',system-ui,sans-serif;--ff-display:'Barlow Semi Condensed',Impact,sans-serif;--ff-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--campo-0:#F5F4F0;--campo-1:#ECEAE3;--campo-2:#141414;--campo-3:#5A5A5A;--campo-4:#B5B2A8;--c-infra:#352A87;--c-inter:#6526A5;--c-humano:#A61F8C;--c-decisao:#E11D4F;--c-acao:#F2672A;--c-atencao:#E9BD3A;--gutter:24px;--margin:64px;font-family:var(--ff-body);color:var(--campo-2);background:var(--campo-0);max-width:1440px;margin:0 auto;position:relative;line-height:1.5;font-size:16px;">
+
+  <!-- NAV -->
+  <header style="position:sticky;top:0;z-index:20;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);padding:22px var(--margin);align-items:center;border-bottom:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0)" style-before="content:'';position:absolute;left:0;top:0;bottom:0;width:8px;background:linear-gradient(180deg,var(--c-infra) 0 16.6%,var(--c-inter) 16.6% 33.3%,var(--c-humano) 33.3% 50%,var(--c-decisao) 50% 66.6%,var(--c-acao) 66.6% 83.3%,var(--c-atencao) 83.3% 100%)">
+    <a href="index.html" style="grid-column:1/span 5;font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:0.04em;font-weight:800;white-space:nowrap;color:var(--campo-0);text-decoration:none">EVELYN BITENCOURT</a>
+    <nav style="grid-column:6/span 7;display:flex;gap:32px;justify-content:flex-end;align-items:center;font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em">
+      <a href="index.html#projetos" style="color:var(--campo-0);opacity:0.8">← Todos os projetos</a>
+      <a href="index.html#contato" style="color:var(--campo-2);background:var(--c-atencao);padding:9px 18px;font-weight:600;opacity:1">Contato</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section style="position:relative;padding:80px var(--margin) 56px;border-bottom:1px solid var(--campo-2);display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+    <div style="grid-column:1/span 12;border:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0);padding:48px;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);position:relative;overflow:hidden">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:10px;background:linear-gradient(180deg,var(--c-decisao) 0 50%,var(--c-humano) 50% 100%)"></div>
+      <div style="grid-column:1/span 3;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;line-height:2;color:var(--campo-4)">
+        Instituição<b style="display:block;color:var(--campo-0);font-weight:500">Impulsogov · Pref. de Santos</b>
+        Período<b style="display:block;color:var(--campo-0);font-weight:500">2025 — 2026</b>
+        Escala<b style="display:block;color:var(--campo-0);font-weight:500">720 respondentes · 3 categorias</b>
+        Função<b style="display:block;color:var(--campo-0);font-weight:500">Diagnóstico · redesenho curricular</b>
+        Papel<b style="display:block;color:var(--campo-2);background:var(--c-atencao);width:fit-content;padding:2px 6px">Decisão</b>
+      </div>
+      <div style="grid-column:5/span 8">
+        <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--c-atencao);margin-bottom:16px">PROAPS — saúde mental na APS</div>
+        <h1 style="font-family:var(--ff-display);font-size:44px;line-height:0.92;letter-spacing:-0.02em;font-weight:900;margin:0 0 20px;text-transform:uppercase">De <span style="color:var(--c-atencao)">one-fits-all</span> a três trilhas que cabem no SUS real.</h1>
+        <p style="font-size:17px;line-height:1.55;max-width:620px;margin:0;opacity:0.88">A formação em saúde mental para a APS de Santos era a mesma para ACS, enfermeiro e médico de família — ignorando que cada categoria tem escopo, tempo de contato e retaguarda completamente diferentes. Fiz o diagnóstico com as três categorias e redesenhei a capacitação considerando a equipe mínima que o SUS realmente tem em cada unidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORPO -->
+  <section style="position:relative;padding:56px var(--margin) 96px;border-bottom:1px solid var(--campo-2)">
+    <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 12;border:1px solid var(--campo-2)">
+        <image-slot id="proaps-cover" shape="rect" placeholder="PROAPS — foto de campo / equipe" style="aspect-ratio:21/9;display:block"></image-slot>
+      </div>
+
+      <div style="grid-column:1/span 4;border:1px solid var(--campo-2);padding:32px;background:var(--campo-0);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3)">§ Problema</div>
+        <h4 style="font-family:var(--ff-display);font-size:26px;letter-spacing:-0.01em;text-transform:uppercase;margin:0">Um curso para três realidades</h4>
+        <p style="font-size:14px;line-height:1.6;color:var(--campo-2);margin:0">A ACS tem 8 a 12 visitas domiciliares por dia e nenhuma formação em escuta. A enfermeira coordena a equipe e aplica rastreio "que viu na internet". O médico tem 15 minutos de consulta e zero retaguarda. Uma formação genérica não cabia em nenhuma das três rotinas.</p>
+      </div>
+      <div style="grid-column:5/span 4;border:1px solid var(--campo-2);padding:32px;background:var(--campo-0);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3)">§ Meu papel</div>
+        <h4 style="font-family:var(--ff-display);font-size:26px;letter-spacing:-0.01em;text-transform:uppercase;margin:0">Diagnóstico + redesenho</h4>
+        <p style="font-size:14px;line-height:1.6;color:var(--campo-2);margin:0">Construí personas e Jobs to be Done para as três categorias assistenciais, levantei indicadores com 720 profissionais e desenhei o princípio norteador do redesenho: deixar de ser one-fits-all e focar em categorias escaláveis.</p>
+      </div>
+      <div style="grid-column:9/span 4;border:1px solid var(--campo-2);padding:32px;background:var(--campo-0);display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3)">§ Restrição real</div>
+        <h4 style="font-family:var(--ff-display);font-size:26px;letter-spacing:-0.01em;text-transform:uppercase;margin:0">Equipe mínima do SUS</h4>
+        <p style="font-size:14px;line-height:1.6;color:var(--campo-2);margin:0">Sem contratar especialista novo. A trilha tinha que caber na equipe mínima que já existe em qualquer UBS — ACS, enfermeiro e médico de família — e não podia consumir os já escassos 15 minutos de consulta do médico.</p>
+      </div>
+
+      <div style="grid-column:1/span 12;border:1px solid var(--campo-2);padding:32px;background:var(--campo-1);position:relative">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px">
+          <h4 style="font-family:var(--ff-display);font-size:22px;text-transform:uppercase;margin:0">Uma trilha vira três — por categoria</h4>
+          <div style="font-family:var(--ff-mono);font-size:10px;color:var(--campo-3)">FIG. — modelo redesenhado</div>
+        </div>
+        <svg viewBox="0 0 1100 280" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="width:100%;height:280px;display:block">
+          <defs><pattern id="pgrid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--campo-4)" stroke-width="0.5" opacity="0.6"></path></pattern></defs>
+          <rect width="1100" height="280" fill="url(#pgrid)"></rect>
+          <circle cx="40" cy="140" r="9" fill="var(--c-decisao)"></circle>
+          <text x="10" y="118" font-family="JetBrains Mono, monospace" font-size="10" fill="var(--c-decisao)" letter-spacing="1">ONE-FITS-ALL</text>
+          <g stroke="var(--campo-2)" stroke-width="1.5" fill="none">
+            <path d="M50 138 Q 200 50 340 50"></path>
+            <path d="M50 140 L340 140"></path>
+            <path d="M50 142 Q 200 230 340 230"></path>
+          </g>
+          <rect x="340" y="24" width="230" height="52" fill="none" stroke="var(--c-infra)" stroke-width="1.5"></rect>
+          <text x="352" y="46" font-family="JetBrains Mono, monospace" font-size="10" fill="var(--campo-2)" letter-spacing="0.5">ACS · presencial 4 dias</text>
+          <text x="352" y="62" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--campo-3)" letter-spacing="0.5">rastreio + sessão única + visita</text>
+          <rect x="340" y="114" width="230" height="52" fill="none" stroke="var(--c-humano)" stroke-width="1.5"></rect>
+          <text x="352" y="136" font-family="JetBrains Mono, monospace" font-size="10" fill="var(--campo-2)" letter-spacing="0.5">Enfermeiro · híbrido 5 dias</text>
+          <text x="352" y="152" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--campo-3)" letter-spacing="0.5">rastreio + AIP 4 encontros + PTS</text>
+          <rect x="340" y="204" width="230" height="52" fill="none" stroke="var(--c-acao)" stroke-width="1.5"></rect>
+          <text x="352" y="226" font-family="JetBrains Mono, monospace" font-size="10" fill="var(--campo-2)" letter-spacing="0.5">Médico · remoto 2 encontros</text>
+          <text x="352" y="242" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--campo-3)" letter-spacing="0.5">estratificação + manejo + matriciamento</text>
+          <g stroke="var(--campo-2)" stroke-width="1.5" fill="none">
+            <path d="M570 50 L700 50"></path><path d="M570 140 L700 140"></path><path d="M570 230 L700 230"></path>
+          </g>
+          <circle cx="700" cy="50" r="7" fill="var(--c-infra)"></circle>
+          <circle cx="700" cy="140" r="7" fill="var(--c-humano)"></circle>
+          <circle cx="700" cy="230" r="7" fill="var(--c-acao)"></circle>
+          <text x="716" y="46" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--campo-3)" letter-spacing="0.5">tutoria 3 meses</text>
+          <text x="716" y="136" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--campo-3)" letter-spacing="0.5">supervisão 5-6 meses</text>
+          <text x="716" y="226" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--campo-3)" letter-spacing="0.5">retaguarda + protocolo</text>
+        </svg>
+        <div style="display:flex;gap:24px;margin-top:16px;flex-wrap:wrap;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3)">
+          <span style="display:flex;align-items:center;gap:7px"><i style="width:10px;height:10px;display:block;background:var(--c-decisao)"></i>Ponto de decisão</span>
+          <span style="display:flex;align-items:center;gap:7px"><i style="width:10px;height:10px;display:block;background:var(--c-infra)"></i>ACS</span>
+          <span style="display:flex;align-items:center;gap:7px"><i style="width:10px;height:10px;display:block;background:var(--c-humano)"></i>Enfermeiro</span>
+          <span style="display:flex;align-items:center;gap:7px"><i style="width:10px;height:10px;display:block;background:var(--c-acao)"></i>Médico de família</span>
+        </div>
+      </div>
+
+      <div style="grid-column:1/span 7;border:1px solid var(--campo-2);border-left:8px solid var(--c-acao);padding:32px;background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Ação implantada</div>
+        <h4 style="font-family:var(--ff-display);font-size:30px;line-height:1.05;margin-bottom:14px;text-transform:uppercase">Três trilhas, três formatos, um mesmo protocolo de base.</h4>
+        <p style="font-size:14px;line-height:1.6;margin:0">ACS: presencial de 4 dias com tutoria semanal por 3 meses, focado em rastreio e acolhimento em visita domiciliar. Enfermeiro: formato híbrido de 5 dias com supervisão semanal por 5-6 meses, incluindo matriciamento e PTS. Médico de família: 2 encontros remotos síncronos, focados em estratificação de risco e manejo de psicofármacos com retaguarda de psiquiatra.</p>
+        <p style="margin-top:14px;color:var(--campo-3);font-size:14px">Cada trilha usa protocolos de rastreio padronizados (PHQ-9, GAD-7) adaptados à profundidade de atuação de cada categoria.</p>
+      </div>
+      <div style="grid-column:8/span 5;display:grid;grid-template-columns:1fr 1fr;gap:var(--gutter)">
+        <div style="border:1px solid var(--campo-2);padding:24px;background:var(--c-acao);color:var(--campo-2);display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-family:var(--ff-display);font-size:44px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">720</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;opacity:0.75">Profissionais respondentes no diagnóstico</div>
+        </div>
+        <div style="border:1px solid var(--campo-2);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-family:var(--ff-display);font-size:44px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">95,8%</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;color:var(--campo-3)">Querem capacitação em saúde mental</div>
+        </div>
+        <div style="border:1px solid var(--campo-2);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-family:var(--ff-display);font-size:44px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">26,5%</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;color:var(--campo-3)">Em matriciamento — o menor índice entre as categorias</div>
+        </div>
+        <div style="border:1px solid var(--campo-2);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;justify-content:space-between">
+          <div style="font-family:var(--ff-display);font-size:44px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">3</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;color:var(--campo-3)">Trilhas formativas redesenhadas por categoria</div>
+        </div>
+      </div>
+
+      <div style="grid-column:1/span 12;padding:36px 44px;border:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0);display:grid;grid-template-columns:60px 1fr 220px;gap:28px;align-items:center;margin-top:8px">
+        <div style="font-family:var(--ff-display);font-size:64px;line-height:0.7;color:var(--c-atencao);font-weight:900">"</div>
+        <div style="font-family:var(--ff-display);font-size:24px;line-height:1.2;text-transform:none;font-weight:700;letter-spacing:-0.005em">Nós ACS é que damos esse apoio aos pacientes, conversando e acolhendo. Seria essencial se tivéssemos mais conhecimento para lidar com essas situações.</div>
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-4);line-height:1.7;text-align:right">ACS<br/>Piauí<br/>—<br/>pesquisa de campo, PROAPS</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <footer style="padding:88px var(--margin);background:var(--campo-2);color:var(--campo-0);display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);position:relative;overflow:hidden" style-before="content:'';position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--c-infra) 0 16.6%,var(--c-inter) 16.6% 33.3%,var(--c-humano) 33.3% 50%,var(--c-decisao) 50% 66.6%,var(--c-acao) 66.6% 83.3%,var(--c-atencao) 83.3% 100%)">
+    <div style="grid-column:1/span 7">
+      <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-atencao);margin-bottom:18px">Contato</div>
+      <h3 style="font-family:var(--ff-display);font-size:44px;line-height:0.95;letter-spacing:-0.03em;font-weight:900;margin:0 0 24px;text-transform:uppercase">Vamos ver onde o seu serviço <span style="color:var(--c-acao)">fricciona</span>.</h3>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:17px">
+        <a href="mailto:evelyn.bitencourt@gmail.com" style="color:var(--campo-0);border-bottom:1px solid rgba(245,244,240,0.25);width:fit-content;padding-bottom:2px">evelyn.bitencourt@gmail.com</a>
+        <a href="index.html#projetos" style="color:var(--campo-0);border-bottom:1px solid rgba(245,244,240,0.25);width:fit-content;padding-bottom:2px">← Voltar a todos os projetos</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+</body>
+</html>
