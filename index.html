@@ -17,7 +17,6 @@
     a{color:#E11D4F}
     a:hover{color:#F2672A}
   </style>
-  <script src="./image-slot.js"></script>
 </helmet>
 
 <div style="--ff-body:'Mulish',system-ui,sans-serif;--ff-display:'Barlow Semi Condensed',Impact,sans-serif;--ff-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--campo-0:#F5F4F0;--campo-1:#ECEAE3;--campo-2:#141414;--campo-3:#5A5A5A;--campo-4:#B5B2A8;--c-infra:#352A87;--c-inter:#6526A5;--c-humano:#A61F8C;--c-decisao:#E11D4F;--c-acao:#F2672A;--c-atencao:#E9BD3A;--gutter:24px;--margin:64px;font-family:var(--ff-body);color:var(--campo-2);background:var(--campo-0);max-width:1440px;margin:0 auto;position:relative;line-height:1.5;font-size:16px;">
@@ -55,7 +54,7 @@
     <div style="grid-column:8/span 5;position:relative;z-index:1">
       <div style="border:1px solid var(--campo-2);aspect-ratio:4/5;position:relative">
         <div style="position:absolute;left:-10px;top:-10px;right:10px;bottom:10px;border:1px solid var(--c-decisao);z-index:-1"></div>
-        <image-slot id="retrato-hero.jpg" shape="rect" placeholder="Foto de Evelyn — retrato 4:5"></image-slot>
+        <img src="images/retrato-hero.jpg" alt="Foto de Evelyn — retrato" style="width:100%;height:100%;object-fit:cover;display:block" />
       </div>
     </div>
   </section>
@@ -79,7 +78,7 @@
       </div>
       <div style="grid-column:1/span 6;order:1">
         <div style="border:1px solid var(--campo-2);aspect-ratio:4/5">
-          <image-slot id="retrato-sobre" shape="rect" placeholder="Retrato ou foto de campo — 4:5"></image-slot>
+          <img src="images/retrato-sobre.jpg" alt="Retrato ou foto de campo" style="width:100%;height:100%;object-fit:cover;display:block" />
         </div>
       </div>
       <div style="grid-column:1/span 12;order:3;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gutter);margin-top:40px;padding-top:28px;border-top:1px solid var(--campo-2)">
@@ -104,7 +103,7 @@
       <!-- PROAPS featured -->
       <a href="PROAPS.dc.html" style="grid-column:span 1;border:1px solid var(--campo-2);background:var(--campo-0);display:flex;flex-direction:column;text-decoration:none;color:inherit">
         <div style="height:170px;border-bottom:1px solid var(--campo-2)">
-          <image-slot id="proj-proaps" shape="rect" placeholder="PROAPS — foto de campo / equipe"></image-slot>
+          <img src="images/proj-proaps.jpg" alt="PROAPS — foto de campo / equipe" style="width:100%;height:100%;object-fit:cover;display:block" />
         </div>
         <div style="padding:22px;display:flex;flex-direction:column;gap:10px;flex:1">
           <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-decisao)">§ Caso · Decisão</div>
@@ -119,7 +118,7 @@
       <!-- Viva Vida -->
       <a href="VivaVida.dc.html" style="grid-column:span 1;border:1px solid var(--campo-2);background:var(--campo-0);display:flex;flex-direction:column;text-decoration:none;color:inherit">
         <div style="height:170px;border-bottom:1px solid var(--campo-2)">
-          <image-slot id="proj-vivavida" shape="rect" placeholder="Viva Vida — foto de campo"></image-slot>
+          <img src="images/proj-vivavida.jpg" alt="Viva Vida — foto de campo" style="width:100%;height:100%;object-fit:cover;display:block" />
         </div>
         <div style="padding:22px;display:flex;flex-direction:column;gap:10px;flex:1">
           <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-acao)">§ Caso · Ação</div>
@@ -134,7 +133,7 @@
       <!-- In.cube -->
       <a href="InCube.dc.html" style="grid-column:span 1;border:1px solid var(--campo-2);background:var(--campo-0);display:flex;flex-direction:column;text-decoration:none;color:inherit">
         <div style="height:170px;border-bottom:1px solid var(--campo-2)">
-          <image-slot id="proj-incube" shape="rect" placeholder="In.cube — foto de programa"></image-slot>
+          <img src="images/proj-incube.jpg" alt="In.cube — foto de programa" style="width:100%;height:100%;object-fit:cover;display:block" />
         </div>
         <div style="padding:22px;display:flex;flex-direction:column;gap:10px;flex:1">
           <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-infra)">§ Caso · Infraestrutura</div>
@@ -149,7 +148,7 @@
       <!-- In.spire -->
       <a href="InSpire.dc.html" style="grid-column:span 1;border:1px solid var(--campo-2);background:var(--campo-0);display:flex;flex-direction:column;text-decoration:none;color:inherit">
         <div style="height:170px;border-bottom:1px solid var(--campo-2)">
-          <image-slot id="proj-inspire" shape="rect" placeholder="In.spire — foto de oficina"></image-slot>
+          <img src="images/proj-inspire.jpg" alt="In.spire — foto de oficina" style="width:100%;height:100%;object-fit:cover;display:block" />
         </div>
         <div style="padding:22px;display:flex;flex-direction:column;gap:10px;flex:1">
           <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-humano)">§ Caso · Presença humana</div>
@@ -164,7 +163,7 @@
       <!-- Pessoas que Transformam -->
       <a href="PessoasQueTransformam.dc.html" style="grid-column:span 1;border:1px solid var(--campo-2);background:var(--campo-0);display:flex;flex-direction:column;text-decoration:none;color:inherit">
         <div style="height:170px;border-bottom:1px solid var(--campo-2)">
-          <image-slot id="proj-pessoas" shape="rect" placeholder="Pessoas que Transformam — foto"></image-slot>
+          <img src="images/proj-pessoas.jpg" alt="Pessoas que Transformam — foto" style="width:100%;height:100%;object-fit:cover;display:block" />
         </div>
         <div style="padding:22px;display:flex;flex-direction:column;gap:10px;flex:1">
           <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-atencao)">§ Caso · Decisão</div>
@@ -180,7 +179,7 @@
       <sc-if value="{{ showJogoCase }}" hint-placeholder-val="{{ true }}">
         <a href="JogoSUS.dc.html" style="grid-column:span 1;border:1px solid var(--campo-2);background:var(--campo-0);display:flex;flex-direction:column;text-decoration:none;color:inherit">
           <div style="height:170px;border-bottom:1px solid var(--campo-2)">
-            <image-slot id="proj-jogo" shape="rect" placeholder="Jogo In.spire SUS — foto do tabuleiro"></image-slot>
+            <img src="images/proj-jogo.jpg" alt="Jogo In.spire SUS — foto do tabuleiro" style="width:100%;height:100%;object-fit:cover;display:block" />
           </div>
           <div style="padding:22px;display:flex;flex-direction:column;gap:10px;flex:1">
             <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-acao)">§ Caso · Ferramenta</div>
