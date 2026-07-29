@@ -7,15 +7,33 @@
 </head>
 <body>
 <x-dc>
-
 <helmet>
   <link rel="preconnect" href="https://fonts.googleapis.com"></link>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"></link>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&family=Barlow+Semi+Condensed:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"></link>
   <style>
-    body{margin:0;-webkit-font-smoothing:antialiased}
+    *{box-sizing:border-box}
+    body{margin:0;-webkit-font-smoothing:antialiased;overflow-x:hidden}
     a{color:#E11D4F}
     a:hover{color:#F2672A}
+    img{max-width:100%}
+    .hamburger{display:none}
+    @media (max-width:860px){
+      .site-nav{display:none !important}
+      .hamburger{display:flex !important}
+    }
+    @media (max-width:1024px){
+      .gwrap{grid-template-columns:repeat(2,1fr) !important}
+      .gwrap>*{grid-column:span 1 !important}
+    }
+    @media (max-width:768px){
+      .gwrap{grid-template-columns:1fr !important}
+      .gwrap>*{grid-column:1/-1 !important}
+      section,header,footer{padding-left:28px !important;padding-right:28px !important}
+    }
+    @media (max-width:480px){
+      section,header,footer{padding-left:16px !important;padding-right:16px !important}
+    }
   </style>
 </helmet>
 
@@ -24,12 +42,21 @@
   <!-- NAV -->
   <header data-screen-label="00 Nav" style="position:sticky;top:0;z-index:20;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);padding:22px var(--margin);align-items:center;border-bottom:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0)" style-before="content:'';position:absolute;left:0;top:0;bottom:0;width:8px;background:linear-gradient(180deg,var(--c-infra) 0 16.6%,var(--c-inter) 16.6% 33.3%,var(--c-humano) 33.3% 50%,var(--c-decisao) 50% 66.6%,var(--c-acao) 66.6% 83.3%,var(--c-atencao) 83.3% 100%)">
     <div style="grid-column:1/span 5;font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:0.04em;font-weight:800;white-space:nowrap">EVELYN BITENCOURT</div>
-    <nav style="grid-column:6/span 7;display:flex;gap:32px;justify-content:flex-end;align-items:center;font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em">
+    <nav class="site-nav" style="grid-column:6/span 7;display:flex;gap:32px;justify-content:flex-end;align-items:center;font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em">
       <a href="#inicio" style="color:var(--campo-0);opacity:0.8">Página Principal</a>
       <a href="#sobre" style="color:var(--campo-0);opacity:0.8">Sobre mim</a>
       <a href="#projetos" style="color:var(--campo-0);opacity:0.8">Projetos</a>
       <a href="#contato" style="color:var(--campo-2);background:var(--c-atencao);padding:9px 18px;font-weight:600;opacity:1">Contato</a>
     </nav>
+    <button class="hamburger" onClick="{{ toggleNav }}" aria-label="Menu" style="display:none;grid-column:12/span 1;justify-self:end;width:40px;height:40px;border:1px solid var(--campo-0);background:transparent;color:var(--campo-0);font-size:20px;line-height:1;align-items:center;justify-content:center;cursor:pointer">{{ navIcon }}</button>
+    <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
+      <nav style="grid-column:1/-1;display:flex;flex-direction:column;padding:8px 0 4px;border-top:1px solid rgba(245,244,240,0.15);margin-top:16px;font-family:var(--ff-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.08em">
+        <a href="#inicio" onClick="{{ closeNav }}" style="color:var(--campo-0);padding:14px 0;border-bottom:1px solid rgba(245,244,240,0.1)">Página Principal</a>
+        <a href="#sobre" onClick="{{ closeNav }}" style="color:var(--campo-0);padding:14px 0;border-bottom:1px solid rgba(245,244,240,0.1)">Sobre mim</a>
+        <a href="#projetos" onClick="{{ closeNav }}" style="color:var(--campo-0);padding:14px 0;border-bottom:1px solid rgba(245,244,240,0.1)">Projetos</a>
+        <a href="#contato" onClick="{{ closeNav }}" style="color:var(--campo-2);background:var(--c-atencao);padding:12px 18px;font-weight:600;width:fit-content;margin-top:14px">Contato</a>
+      </nav>
+    </sc-if>
   </header>
 
   <!-- PÁGINA PRINCIPAL -->
@@ -42,11 +69,11 @@
         <path d="M100 720 C 220 600, 320 620, 460 540 S 720 420, 900 400 S 1200 340, 1380 280" stroke="#352A87" stroke-width="1.5" opacity="0.4"></path>
       </g>
     </svg>
-    <div style="grid-column:1/span 6;min-width:0;position:relative;z-index:1">
-      <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:20px;color:var(--campo-3)">Design de serviços · Transformação em saúde pública · desde 2018</div>
+    <div class="gwrap-fake" style="grid-column:1/span 6;min-width:0;position:relative;z-index:1">
+      <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:20px;color:var(--campo-3)">Staff Design · Design de serviços · Transformação em saúde pública · desde 2018</div>
       <h1 style="font-family:var(--ff-display);font-weight:900;letter-spacing:-0.035em;line-height:0.92;text-transform:uppercase;margin:0 0 28px;font-size:clamp(44px,5.4vw,80px);overflow-wrap:anywhere">EVELYN BITENCOURT</h1>
       <p style="font-size:18px;line-height:1.5;max-width:520px;margin:0 0 36px">Transformando complexidade em decisões claras — pesquisa e design de serviços aplicados à saúde pública.</p>
-      <div style="display:flex;gap:16px">
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
         <a href="#projetos" style="display:inline-block;background:var(--campo-2);color:var(--campo-0);padding:14px 28px;font-family:var(--ff-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.08em;font-weight:600">Ver projetos</a>
         <a href="#contato" style="display:inline-block;border:1px solid var(--campo-2);color:var(--campo-2);padding:14px 28px;font-family:var(--ff-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.08em;font-weight:600">Fale comigo</a>
       </div>
@@ -61,14 +88,14 @@
 
   <!-- SOBRE MIM -->
   <section id="sobre" data-screen-label="02 Sobre mim" style="position:relative;padding:96px var(--margin);border-bottom:1px solid var(--campo-2)">
-    <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);margin-bottom:48px;align-items:baseline">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);margin-bottom:48px;align-items:baseline">
       <div style="grid-column:1/span 2;font-family:var(--ff-display);font-size:56px;line-height:1">02</div>
       <div style="grid-column:3/span 8">
         <h2 style="font-family:var(--ff-display);font-weight:800;letter-spacing:-0.015em;line-height:0.9;text-transform:uppercase;margin:0 0 8px;font-size:44px">Sobre mim</h2>
         <div style="font-family:var(--ff-body);font-size:16px;font-weight:400;color:var(--campo-3);max-width:560px;line-height:1.45">Quem faz o sistema funcionar.</div>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
       <div style="grid-column:8/span 5;order:2">
         <h3 style="font-family:var(--ff-display);font-size:34px;line-height:1;letter-spacing:-0.02em;margin-bottom:20px;text-transform:uppercase">Staff design ponta a ponta, com foco em saúde pública.</h3>
         <p style="font-size:16px;line-height:1.65;margin:0 0 16px">Sou mestre em Design pela USP, com trajetória em saúde pública, educação e transformação governamental — passando por ImpulsoGov, InovaHC/HCFMUSP, a Prefeitura de São Paulo e uma consultoria para a UNESCO. Atuo do discovery ao delivery: pesquisa, hipóteses e validação de um lado; definição de solução e acompanhamento técnico com times multidisciplinares do outro.</p>
@@ -81,7 +108,7 @@
           <img src="images/retrato-sobre.jpg" alt="Retrato ou foto de campo" style="width:100%;height:100%;object-fit:cover;display:block" />
         </div>
       </div>
-      <div style="grid-column:1/span 12;order:3;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gutter);margin-top:40px;padding-top:28px;border-top:1px solid var(--campo-2)">
+      <div class="gwrap" style="grid-column:1/span 12;order:3;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gutter);margin-top:40px;padding-top:28px;border-top:1px solid var(--campo-2)">
         <div><div style="font-family:var(--ff-display);font-size:38px;font-weight:900;letter-spacing:-0.02em;line-height:1">8</div><div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-top:6px;line-height:1.5">Anos em transformação pública e saúde</div></div>
         <div><div style="font-family:var(--ff-display);font-size:38px;font-weight:900;letter-spacing:-0.02em;line-height:1">100+</div><div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-top:6px;line-height:1.5">Profissionais capacitados em design centrado no usuário</div></div>
         <div><div style="font-family:var(--ff-display);font-size:38px;font-weight:900;letter-spacing:-0.02em;line-height:1">700+</div><div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-top:6px;line-height:1.5">Profissionais alcançados pelo programa In.cube</div></div>
@@ -91,7 +118,7 @@
 
   <!-- PROJETOS -->
   <section id="projetos" data-screen-label="03 Projetos" style="position:relative;padding:96px var(--margin);border-bottom:1px solid var(--campo-2)">
-    <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);margin-bottom:48px;align-items:baseline">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);margin-bottom:48px;align-items:baseline">
       <div style="grid-column:1/span 2;font-family:var(--ff-display);font-size:56px;line-height:1">03</div>
       <div style="grid-column:3/span 8">
         <h2 style="font-family:var(--ff-display);font-weight:800;letter-spacing:-0.015em;line-height:0.9;text-transform:uppercase;margin:0 0 8px;font-size:44px">Meus projetos</h2>
@@ -99,7 +126,7 @@
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gutter)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gutter)">
       <!-- PROAPS featured -->
       <a href="PROAPS.dc.html" style="grid-column:span 1;border:1px solid var(--campo-2);background:var(--campo-0);display:flex;flex-direction:column;text-decoration:none;color:inherit">
         <div style="height:170px;border-bottom:1px solid var(--campo-2)">
@@ -197,13 +224,15 @@
 
   <!-- CONTATO -->
   <footer id="contato" data-screen-label="04 Contato" style="padding:88px var(--margin);background:var(--campo-2);color:var(--campo-0);display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);position:relative;overflow:hidden" style-before="content:'';position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--c-infra) 0 16.6%,var(--c-inter) 16.6% 33.3%,var(--c-humano) 33.3% 50%,var(--c-decisao) 50% 66.6%,var(--c-acao) 66.6% 83.3%,var(--c-atencao) 83.3% 100%)">
-    <div style="grid-column:1/span 7">
-      <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-atencao);margin-bottom:18px">Contato</div>
-      <h3 style="font-family:var(--ff-display);font-size:52px;line-height:0.95;letter-spacing:-0.03em;font-weight:900;margin:0 0 24px;text-transform:uppercase">Staff Designer<br/>focada em <span style="color:var(--c-acao)">Sistemas Complexos</span>.</h3>
-      <div style="display:flex;flex-direction:column;gap:8px;font-size:17px">
-        <a href="mailto:evelyn.bitencourt@gmail.com" style="color:var(--campo-0);border-bottom:1px solid rgba(245,244,240,0.25);width:fit-content;padding-bottom:2px">evelyn.bitencourt@gmail.com</a>
-        <a href="tel:+5511941243514" style="color:var(--campo-0);border-bottom:1px solid rgba(245,244,240,0.25);width:fit-content;padding-bottom:2px">+55 11 9 4124-3514</a>
-        <a href="https://evelynbitencourt.wixsite.com/evelynbitencourt" style="color:var(--campo-0);border-bottom:1px solid rgba(245,244,240,0.25);width:fit-content;padding-bottom:2px">evelynbitencourt.com</a>
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);grid-column:1/span 12">
+      <div style="grid-column:1/span 7">
+        <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-atencao);margin-bottom:18px">Contato</div>
+        <h3 style="font-family:var(--ff-display);font-size:52px;line-height:0.95;letter-spacing:-0.03em;font-weight:900;margin:0 0 24px;text-transform:uppercase">Staff Designer<br/>focada em <span style="color:var(--c-acao)">Sistemas Complexos</span>.</h3>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:17px">
+          <a href="mailto:evelyn.bitencourt@gmail.com" style="color:var(--campo-0);border-bottom:1px solid rgba(245,244,240,0.25);width:fit-content;padding-bottom:2px">evelyn.bitencourt@gmail.com</a>
+          <a href="tel:+5511941243514" style="color:var(--campo-0);border-bottom:1px solid rgba(245,244,240,0.25);width:fit-content;padding-bottom:2px">+55 11 9 4124-3514</a>
+          <a href="https://evelynbitencourt.wixsite.com/evelynbitencourt" style="color:var(--campo-0);border-bottom:1px solid rgba(245,244,240,0.25);width:fit-content;padding-bottom:2px">evelynbitencourt.com</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -213,10 +242,15 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;principleQuote&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Se não chega para quem precisa, não é mudança real.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Conteúdo&quot;},&quot;showJogoCase&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Conteúdo&quot;}}">
 class Component extends DCLogic {
+  state = { navOpen: false };
   renderVals() {
     return {
       principleQuote: this.props.principleQuote ?? "Se não chega para quem precisa, não é mudança real.",
       showJogoCase: this.props.showJogoCase ?? true,
+      navOpen: this.state.navOpen,
+      navIcon: this.state.navOpen ? '✕' : '☰',
+      toggleNav: () => this.setState(s => ({ navOpen: !s.navOpen })),
+      closeNav: () => this.setState({ navOpen: false }),
     };
   }
 }
