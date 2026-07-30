@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&family=Barlow+Semi+Condensed:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; }
+  a { color: #E9BD3A; }
+  a:hover { color: #F2672A; }
+</style>
+</helmet>
+
+<div style="width:1584px;height:396px;position:relative;overflow:hidden;background:#141414;color:#F5F4F0;font-family:'Mulish',system-ui,sans-serif;">
+
+  <!-- systemic mesh background -->
+  <svg viewBox="0 0 1584 396" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%;opacity:0.5;" aria-hidden="true">
+    <defs>
+      <pattern id="mesh-dot" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+        <circle cx="1" cy="1" r="0.9" fill="#F5F4F0" opacity="0.25"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#mesh-dot)"/>
+    <g fill="none" stroke="#F5F4F0" stroke-width="1">
+      <path d="M-20 300 Q 220 240 420 280 T 820 260 Q 1020 230 1220 270 T 1620 240" stroke-dasharray="4 5" opacity="0.35"/>
+      <path d="M-20 90 Q 220 150 420 110 T 820 130 Q 1020 160 1220 110 T 1620 130" stroke-dasharray="4 5" opacity="0.3"/>
+      <path d="M60 370 C 180 300, 280 320, 420 260 S 680 190, 860 170 S 1160 120, 1360 80" stroke="#352A87" stroke-width="1.5" opacity="0.6"/>
+      <path d="M-20 200 Q 180 180 320 230 T 620 240 Q 820 250 980 200 T 1420 190" stroke="#A61F8C" stroke-width="1" opacity="0.5"/>
+    </g>
+    <g>
+      <circle cx="180" cy="320" r="4" fill="#352A87"/>
+      <circle cx="420" cy="260" r="5" fill="#352A87"/>
+      <circle cx="620" cy="240" r="5" fill="#A61F8C"/>
+      <rect x="856" y="166" width="10" height="10" fill="#E11D4F"/>
+      <circle cx="1160" cy="120" r="6" fill="#6526A5"/>
+      <circle cx="1360" cy="80" r="7" fill="#F2672A"/>
+    </g>
+  </svg>
+
+  <!-- left color stripe -->
+  <div style="position:absolute;left:0;top:0;bottom:0;width:12px;background:linear-gradient(180deg,#352A87 0 16.6%,#6526A5 16.6% 33.3%,#A61F8C 33.3% 50%,#E11D4F 50% 66.6%,#F2672A 66.6% 83.3%,#E9BD3A 83.3% 100%);z-index:2;"></div>
+
+  <!-- right-aligned text block -->
+  <div style="position:absolute;top:0;right:0;bottom:0;width:66%;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;padding:0 64px;text-align:right;z-index:2;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#B5B2A8;margin-bottom:14px;">§ Design de serviços · UX research</div>
+    <h1 style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:800;font-size:32px;line-height:1.05;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px 0;max-width:520px;">
+      Especialista em <span style="color:#F2672A;">design de serviços</span> &amp; UX research
+    </h1>
+    <div style="font-size:14px;line-height:1.5;color:#ECEAE3;max-width:420px;">
+      Focada em entregas para <span style="font-style:italic;color:#E9BD3A;">sistemas complexos</span>.
+    </div>
+    <div style="margin-top:18px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.08em;color:#B5B2A8;">
+      evelyn.bitencourt@gmail.com
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1584,&quot;height&quot;:396}}"></script>
+</body>
+</html>
