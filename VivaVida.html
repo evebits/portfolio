@@ -12,8 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"></link>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&family=Barlow+Semi+Condensed:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"></link>
   <title>Mapeamento Viva Vida, Pesquisa Qualitativa em Saúde Mental | Evelyn Bitencourt</title>
-  <meta name="description" content="Pesquisa qualitativa sobre uma intervenção psicossocial via WhatsApp para idosos com sintomas depressivos, com IPq-HCFMUSP, King's College e FAUUSP."></meta>
-  <link rel="canonical" href="https://evelynsbitencourt.netlify.app/VivaVida.dc.html"></link>
+  <meta name="description" content="Estudo qualitativo aninhado em ensaio clínico randomizado: 55 entrevistas e 167 reuniões de observação participante sobre uma intervenção psicossocial via WhatsApp para idosos de baixa renda com sintomas depressivos."></meta>
+  <link rel="canonical" href="https://evelynsbitencourt.netlify.app/VivaVida.html"></link>
   <meta property="og:type" content="article"></meta>
   <meta property="og:title" content="Mapeamento Viva Vida, Pesquisa Qualitativa em Saúde Mental"></meta>
   <meta property="og:description" content="Pesquisa qualitativa sobre intervenção psicossocial via WhatsApp para idosos com sintomas depressivos."></meta>
@@ -40,11 +40,17 @@
     @media (max-width:991.98px){
       .gwrap{grid-template-columns:repeat(2,1fr) !important}
       .gwrap>*{grid-column:span 1 !important}
+      .gwrap>[style*="absolute"]{grid-column:auto !important}
+      .gwrap>[style*="span 12"]{grid-column:1/-1 !important}
+      .gwrap .gwrap{grid-column:1/-1 !important;grid-template-columns:1fr !important}
+      .quote-grid{grid-template-columns:1fr !important;gap:16px !important}
+      .quote-grid>*:last-child{text-align:left !important}
       .hero-box{padding:36px !important}
     }
     @media (max-width:768px){
       .gwrap{grid-template-columns:1fr !important}
       .gwrap>*{grid-column:1/-1 !important}
+      .gwrap>[style*="absolute"]{grid-column:auto !important}
       section,header,footer{padding-left:28px !important;padding-right:28px !important}
     }
     @media (max-width:575.98px){
@@ -79,80 +85,160 @@
     <div class="hero-box gwrap" style="grid-column:1/span 12;border:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0);padding:48px;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);position:relative;overflow:hidden">
       <div style="position:absolute;left:0;top:0;bottom:0;width:10px;background:var(--c-acao)"></div>
       <div style="grid-column:1/span 3;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;line-height:2;color:var(--campo-4)">
-        Instituição<b style="display:block;color:var(--campo-0);font-weight:500">FAUUSP · equipe de ensaio clínico Viva Vida</b>
-        Período<b style="display:block;color:var(--campo-0);font-weight:500">2022, 2024</b>
-        Escala<b style="display:block;color:var(--campo-0);font-weight:500">55 participantes entrevistados</b>
-        Função<b style="display:block;color:var(--campo-0);font-weight:500">Dissertação de mestrado · pesquisa qualitativa</b>
+        Instituição<b style="display:block;color:var(--campo-0);font-weight:500">FAUUSP · IPq-HCFMUSP · King's College</b>
+        Período<b style="display:block;color:var(--campo-0);font-weight:500">2021-2024 · 20 meses de campo</b>
+        Escala<b style="display:block;color:var(--campo-0);font-weight:500">55 entrevistas · 167 reuniões observadas</b>
+        Função<b style="display:block;color:var(--campo-0);font-weight:500">Pesquisa qualitativa · dissertação de mestrado</b>
         Papel<b style="display:block;color:var(--campo-2);background:var(--c-acao);width:fit-content;padding:2px 6px">UX Research</b>
       </div>
       <div style="grid-column:5/span 8">
         <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--c-atencao);margin-bottom:16px">Design de serviços na saúde mental pública</div>
         <h1 style="font-family:var(--ff-display);font-size:44px;line-height:0.92;letter-spacing:-0.02em;font-weight:900;margin:0 0 20px;text-transform:uppercase;overflow-wrap:anywhere">A experiência de idosos de baixa renda no programa Viva Vida.</h1>
-        <p style="font-size:17px;line-height:1.55;max-width:620px;margin:0;opacity:0.88">Dissertação de mestrado (FAUUSP, 2024) em fase de discovery sobre o Viva Vida, intervenção psicossocial via WhatsApp para idosos de baixa renda em São Paulo com sintomas depressivos. Investiguei os touchpoints do serviço, a jornada do usuário e o ecossistema de atores envolvidos, para gerar insights de redesenho.</p>
+        <p style="font-size:17px;line-height:1.55;max-width:640px;margin:0;opacity:0.88">Estudo qualitativo aninhado em um ensaio clínico randomizado sobre o Viva Vida, intervenção psicossocial via WhatsApp para idosos de baixa renda com sintomas depressivos. Investiguei os componentes do serviço, a jornada do participante e o mapa de atores. O achado central mudou o que se entendia por "o serviço": os usuários não vivem a intervenção de seis semanas que foi desenhada, e sim um pacote que vai do recrutamento à última avaliação clínica.</p>
       </div>
     </div>
   </section>
 
-  <section style="position:relative;padding:56px var(--margin) 96px;border-bottom:1px solid var(--campo-2)">
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
     <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
       <div style="grid-column:1/span 12;border:1px solid var(--campo-2)">
-        <iframe src="images/vivavida-jornada.pdf" title="Viva Vida, jornada do participante" style="width:100%;aspect-ratio:21/9;border:0;display:block"></iframe>
+        <a href="https://teses.usp.br/teses/disponiveis/16/16140/tde-10012025-102331/pt-br.html" target="_blank" rel="noopener" style="display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;padding:36px 40px;background:var(--campo-1);text-decoration:none;color:var(--campo-2);transition:background .2s ease" style-hover="background:var(--campo-0)">
+          <div>
+            <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Dissertação completa · 223 páginas</div>
+            <h2 style="font-family:var(--ff-display);font-size:26px;line-height:1.05;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 8px">Ler na Biblioteca Digital da USP</h2>
+            <p style="font-size:14px;line-height:1.55;margin:0;color:var(--campo-3);max-width:640px">Texto integral: protocolo de pesquisa, roteiros de entrevista em apêndice, livros de código, os dois mapas de jornada e a análise completa.</p>
+          </div>
+          <div style="font-family:var(--ff-display);font-size:40px;font-weight:900;color:var(--c-acao);line-height:1">↗</div>
+        </a>
       </div>
-      <div style="grid-column:1/span 7;border:1px solid var(--campo-2);border-left:8px solid var(--c-acao);padding:32px;background:var(--campo-0)">
-        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Método</div>
-        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.05;margin-bottom:14px;text-transform:uppercase">Discovery com revisão de literatura, entrevistas e codificação dedutiva e indutiva.</h2>
-        <p style="font-size:14px;line-height:1.6;margin:0">Na fase de discovery, conduzi revisão exploratória da literatura e entrevistas semiestruturadas com 55 participantes após sua passagem pelo programa, como observadora participante da equipe criadora por quase 18 meses. Codifiquei os relatos por análise dedutiva e indutiva e construí o service blueprint da jornada de dois personas de participante: com sintomas depressivos (PHQ-9 > 10) e subclínicos (5 < PHQ-9 < 10), evidenciando pontos de dor e momentos de valor em cada touchpoint.</p>
-        <p style="margin-top:14px;color:var(--campo-3);font-size:14px">Complementei com um mapa de stakeholders dos atores envolvidos direta ou indiretamente no ecossistema do serviço e seus padrões relacionais com os participantes.</p>
+      <div style="grid-column:1/span 7">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Problema de pesquisa</div>
+        <h2 style="font-family:var(--ff-display);font-size:32px;line-height:1.02;letter-spacing:-0.02em;text-transform:uppercase;margin:0 0 14px">O ensaio clínico media se funcionava. Ninguém tinha perguntado como era usar.</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0">Tecnologias digitais de saúde mental se popularizam, mas costumam ser inacessíveis para idosos de baixa renda por custo, dificuldade de uso e falta de engajamento. O Viva Vida rodava como ensaio clínico randomizado com mais de mil participantes recrutados, com desfecho clínico medido por PHQ-9. O que não existia era evidência qualitativa sobre a experiência: quais componentes do serviço funcionavam, onde a jornada quebrava e quem, além do usuário, sustentava o acesso.</p>
       </div>
-      <div style="grid-column:8/span 5;border:1px solid var(--campo-2);padding:24px;background:var(--c-acao);color:var(--campo-2);display:flex;flex-direction:column;justify-content:space-between">
-        <div style="font-family:var(--ff-display);font-size:56px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">55</div>
-        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;margin-top:14px;line-height:1.5">Participantes entrevistados sobre sua experiência com o programa</div>
-      </div>
-    </div>
-
-    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);margin-top:24px">
-      <div style="grid-column:1/span 4;border:1px solid var(--campo-2);padding:28px;background:var(--campo-0)">
-        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:10px">§ Touchpoints do serviço</div>
-        <p style="font-size:14px;line-height:1.6;margin:0">As ligações telefônicas funcionaram como touchpoint de acolhimento. Os áudios com histórias narradas geraram identificação e engajamento, um momento de valor claro. Já as imagens estáticas tiveram baixa retenção, e as enquetes por WhatsApp foram um pain point, causando medo em participantes com baixa literacia digital.</p>
-      </div>
-      <div style="grid-column:5/span 4;border:1px solid var(--campo-2);padding:28px;background:var(--campo-0)">
-        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:10px">§ Pain points da jornada</div>
-        <p style="font-size:14px;line-height:1.6;margin:0">Baixa literacia digital, problemas técnicos, dificuldades de acessibilidade auditiva e/ou visual, analfabetismo e estigma. Some-se a isso barreiras contextuais: pandemia de COVID-19, doenças crônicas e dificuldades financeiras.</p>
-      </div>
-      <div style="grid-column:9/span 4;border:1px solid var(--campo-2);padding:28px;background:var(--campo-0)">
-        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:10px">§ Mapa de stakeholders</div>
-        <p style="font-size:14px;line-height:1.6;margin:0">Rede de apoio (familiares, locais de lazer), sistema de saúde (profissionais e equipamentos) e o grupo responsável pela criação e operação do programa, cada ator com padrões relacionais próprios frente aos participantes.</p>
+      <div style="grid-column:9/span 4;border:1px solid var(--campo-2);border-left:8px solid var(--c-acao);padding:32px;background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Meu papel</div>
+        <h2 style="font-family:var(--ff-display);font-size:23px;line-height:1.05;text-transform:uppercase;margin:0 0 14px">Pesquisadora responsável, dentro da equipe do ensaio</h2>
+        <p style="font-size:14px;line-height:1.6;margin:0">Desenhei o estudo qualitativo, os roteiros e os três livros de código; conduzi entrevistas junto a outros quatro entrevistadores; fiz toda a codificação, a síntese em jornadas e o mapa de atores. A operação do ensaio clínico e a intervenção em si eram do grupo de pesquisa do IPq.</p>
       </div>
     </div>
+  </section>
 
-    <div class="quote-grid" style="grid-column:1/span 12;padding:36px 44px;border:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0);display:grid;grid-template-columns:60px 1fr 220px;gap:28px;align-items:center;margin-top:24px">
-      <div style="font-family:var(--ff-display);font-size:64px;line-height:0.7;color:var(--c-atencao);font-weight:900">"</div>
-      <div style="font-family:var(--ff-display);font-size:24px;line-height:1.2;text-transform:none;font-weight:700;letter-spacing:-0.005em">Apesar das barreiras, participantes relataram que o programa os ajudou a se sentirem melhor, a se motivarem, a aprenderem sobre depressão, a prevenir o suicídio e a desabafar.</div>
-      <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-4);line-height:1.7;text-align:right">Síntese dos insights<br/>·<br/>dissertação, FAUUSP 2024</div>
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 5">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Desenho de pesquisa</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Duas fontes, dois momentos, um livro de código por pergunta</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0 0 14px">Abordagem qualitativa descritiva de base construtivista, relatada segundo o COREQ. Entrevistas semiestruturadas por telefone com roteiro testado em piloto, mais observação participante contínua da equipe que criou e operou a intervenção.</p>
+        <p style="font-size:14px;line-height:1.6;margin:0;color:var(--campo-3)">Aprovado pelo comitê de ética do HCFMUSP e registrado no ReBEC como parte do protocolo do ensaio clínico. Transcrição assistida por ferramenta e revisada por transcritores; codificação temática dedutiva no Atlas.TI, seguindo Bardin, a partir de um livro de código para cada uma das três perguntas de pesquisa.</p>
+      </div>
+      <div style="grid-column:7/span 6;border:1px solid var(--campo-2);padding:32px;background:var(--campo-1)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Amostragem</div>
+        <h3 style="font-family:var(--ff-display);font-size:22px;text-transform:uppercase;margin:0 0 8px">Proposital, estratificada em três eixos</h3>
+        <p style="font-size:14px;line-height:1.6;margin:0 0 18px">A amostra não foi por conveniência: montei células cruzando sexo, duas faixas de idade (60-69 e 70+) e melhora ou não melhora no PHQ-9 na avaliação de três meses, com dois grupos clínicos em paralelo.</p>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px"><li style="padding-left:18px;border-left:2px solid var(--c-acao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">48 entrevistas ao fim do programa</b><span style="font-size:14px;line-height:1.6">24 participantes com sintomas subclínicos e 24 com sintomas moderadamente graves. Duração de 20 minutos a 3 horas.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-humano)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">7 entrevistas durante o programa</b><span style="font-size:14px;line-height:1.6">Participantes recrutados só para a análise qualitativa, entrevistados quatro vezes ao longo de seis semanas, até saturação de dados. Coleta próxima ao fenômeno, para não perder o detalhe do que tinham acabado de ouvir.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-infra)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">167 reuniões como observadora participante</b><span style="font-size:14px;line-height:1.6">Abril de 2021 a dezembro de 2022, com foco em três eixos: dificuldades dos participantes, dificuldades dos proponentes e iterações feitas pela equipe.</span></li></ul>
+      </div>
+      <div class="gwrap" style="grid-column:1/span 12;display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gutter)">
+        <div style="border:1px solid var(--campo-2);padding:24px;background:var(--c-acao);color:var(--campo-2);display:flex;flex-direction:column;justify-content:space-between;min-height:152px">
+          <div style="font-family:var(--ff-display);font-size:42px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">55</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;opacity:0.82">Entrevistas semiestruturadas conduzidas</div>
+        </div>
+        <div style="border:1px solid var(--campo-2);padding:24px;background:var(--campo-0);color:var(--campo-2);display:flex;flex-direction:column;justify-content:space-between;min-height:152px">
+          <div style="font-family:var(--ff-display);font-size:42px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">167</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;opacity:0.82">Reuniões e encontros observados em 20 meses de campo</div>
+        </div>
+        <div style="border:1px solid var(--campo-2);padding:24px;background:var(--campo-0);color:var(--campo-2);display:flex;flex-direction:column;justify-content:space-between;min-height:152px">
+          <div style="font-family:var(--ff-display);font-size:42px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">3</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;opacity:0.82">Livros de código dedutivos, um por pergunta de pesquisa</div>
+        </div>
+        <div style="border:1px solid var(--campo-2);padding:24px;background:var(--c-atencao);color:var(--campo-2);display:flex;flex-direction:column;justify-content:space-between;min-height:152px">
+          <div style="font-family:var(--ff-display);font-size:42px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">2</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;opacity:0.82">Mapas de jornada, um por perfil clínico de participante</div>
+        </div>
+      </div>
+      <div style="grid-column:1/span 12;border:1px solid var(--campo-2);padding:28px;background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Quem é essa população</div>
+        <p style="font-size:14px;line-height:1.7;margin:0;max-width:960px">Entre os participantes do programa, 66,1% tinham renda igual ou inferior a um salário mínimo e 74,7% cursaram apenas o ensino fundamental. A faixa predominante era 60-69 anos (84,2%); 69,5% relataram hipertensão e 41,3% diabetes. Todos com cadastro em unidade básica de saúde do SUS. Recrutar aqui não é recrutar usuário de app: parte do meu trabalho de campo foi acompanhar 63 ligações de recrutamento, das quais 9 resultaram em participação.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="gwrap" style="grid-column:1/span 12;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gutter);margin-top:24px">
-      <div style="border:1px solid var(--campo-2);padding:28px;background:var(--campo-1)">
-        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:10px">§ Recomendação 1 · Cocriação</div>
-        <h2 style="font-family:var(--ff-display);font-size:20px;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 10px">Incluir quem o sistema deixa de fora</h2>
-        <p style="font-size:14px;line-height:1.6;margin:0">Adotar métodos cocriativos no redesenho de intervenções semelhantes, envolvendo pacientes, profissionais de saúde e gestores desde o desenho, e não apenas na avaliação, para mapear necessidades reais e o encaixe no sistema de saúde e nos contextos sociais dos usuários.</p>
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 12">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Achado 1 · Componentes do serviço</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;text-transform:uppercase;letter-spacing:-0.01em;margin:0 0 4px">A hierarquia dos touchpoints não era a que o desenho previa</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0 0 8px;max-width:900px">A intervenção foi desenhada em torno das mensagens. Na percepção do usuário, o que mais pesou foi o canal e a voz humana ao telefone.</p>
       </div>
-      <div style="border:1px solid var(--campo-2);padding:28px;background:var(--campo-1)">
-        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:10px">§ Recomendação 2 · Clareza de canal</div>
-        <h2 style="font-family:var(--ff-display);font-size:20px;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 10px">Distinguir programa e serviço de saúde</h2>
-        <p style="font-size:14px;line-height:1.6;margin:0">Usuários confundem o programa com os serviços de saúde pública do SUS. É preciso desenhar sinalização mais clara sobre o que é a intervenção via WhatsApp e o que é atendimento de saúde, para não gerar expectativas equivocadas de continuidade do cuidado.</p>
+      <div class="gwrap" style="grid-column:1/span 12;display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gutter)">
+        <div style="border:1px solid var(--campo-2);padding:28px;background:var(--campo-0)">
+          <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-humano);margin-bottom:14px">§ O que funcionou</div>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px"><li style="padding-left:18px;border-left:2px solid var(--c-humano)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Ligações telefônicas</b><span style="font-size:14px;line-height:1.6">Viraram componente de acolhimento e espaço de desabafo, incluindo as ligações que existiam só para coletar desfecho clínico.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-humano)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Áudios narrados</b><span style="font-size:14px;line-height:1.6">Histórias de 2 a 5 minutos gravadas por atores profissionais geraram identificação e engajamento. Participantes se comparavam ao personagem e refletiam sobre o que gostam de fazer.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-humano)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">WhatsApp como canal</b><span style="font-size:14px;line-height:1.6">Porta de entrada da inclusão digital. Para parte dos participantes era o único aplicativo em uso, viabilizado por pacotes de dados que liberam o WhatsApp sem limite.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-humano)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">O nome do programa</b><span style="font-size:14px;line-height:1.6">Apareceu em 35 entrevistas como coerente com o propósito. Os adjetivos mais frequentes foram legal, bonito e interessante.</span></li></ul>
+        </div>
+        <div style="border:1px solid var(--campo-2);padding:28px;background:var(--campo-1)">
+          <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-decisao);margin-bottom:14px">§ O que falhou</div>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px"><li style="padding-left:18px;border-left:2px solid var(--c-decisao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Enquetes por WhatsApp</b><span style="font-size:14px;line-height:1.6">Pain point mais agudo. Causaram medo em participantes com baixa literacia digital, que não sabiam o que aconteceria ao tocar numa opção.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-decisao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Imagens estáticas</b><span style="font-size:14px;line-height:1.6">Baixa retenção, especialmente entre participantes com sintomas mais graves. Perda de acuidade visual e tamanho de texto abaixo do recomendado para a faixa etária.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-decisao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">A primeira mensagem</b><span style="font-size:14px;line-height:1.6">Chegar como desconhecido no WhatsApp acionou o repertório de golpe: participantes bloquearam, ignoraram, foram checar na UBS ou pediram para o filho pesquisar na internet.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-decisao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Expectativa de resposta</b><span style="font-size:14px;line-height:1.6">O canal cria expectativa de conversa. Participantes mandaram figurinhas de bom dia para o programa e ficaram esperando resposta que nunca vinha.</span></li></ul>
+        </div>
       </div>
-      <div style="border:1px solid var(--campo-2);padding:28px;background:var(--campo-1)">
-        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:10px">§ Recomendação 3 · Plataforma</div>
-        <h2 style="font-family:var(--ff-display);font-size:20px;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 10px">Explorar melhor os limites do WhatsApp</h2>
-        <p style="font-size:14px;line-height:1.6;margin:0">O canal traz significados prévios (ferramenta de comunicação informal) e funções pré-definidas que podem limitar seu uso clínico. Recomenda-se explorar melhor as possibilidades de interação da plataforma frente às necessidades reais do público-alvo.</p>
+      <div class="quote-grid" style="grid-column:1/span 12;padding:36px 44px;border:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0);display:grid;grid-template-columns:60px 1fr 220px;gap:28px;align-items:center">
+        <div style="font-family:var(--ff-display);font-size:64px;line-height:0.7;color:var(--c-atencao);font-weight:900">"</div>
+        <div style="font-family:var(--ff-display);font-size:22px;line-height:1.24;font-weight:700;letter-spacing:-0.005em">Eu, mesmo, procurei saber se era realmente isso, né? Pedir pra minha filha entrar na internet, ver se existia realmente.</div>
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-4);line-height:1.7;text-align:right">Participante<br/>·<br/>sobre a mensagem de convite</div>
       </div>
     </div>
+  </section>
 
-    <div style="grid-column:1/span 12;border:1px solid var(--campo-2);padding:32px;background:var(--campo-0);margin-top:24px">
-      <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Recomendação 4 · Rede de apoio</div>
-      <h2 style="font-family:var(--ff-display);font-size:22px;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 12px">Projetar para a rede de apoio, não só para o usuário</h2>
-      <p style="font-size:14px;line-height:1.6;margin:0;max-width:820px">Filhos e familiares se mostraram decisivos para o engajamento e a construção de habilidades digitais que permitiram o acesso pleno à intervenção. Desenhos futuros devem considerar essa rede de apoio como parte ativa do serviço, não como coadjuvante.</p>
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 12;border:1px solid var(--campo-2);border-left:8px solid var(--c-atencao);padding:36px;background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Achado 2 · Jornada</div>
+        <h2 style="font-family:var(--ff-display);font-size:38px;line-height:0.98;letter-spacing:-0.02em;text-transform:uppercase;margin:0 0 14px">O serviço não são as seis semanas de intervenção.</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;max-width:960px">Na percepção do participante, o programa começa na ligação de recrutamento e termina na última entrevista de seguimento, meses depois. As ligações do ensaio clínico, que existiam para medir resultado, eram vividas como parte do cuidado. Isso reposiciona o objeto de design: não se avalia esse serviço olhando só para o que foi desenhado como intervenção.</p>
+      </div>
+      <div style="grid-column:1/span 12;margin-top:4px">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ As cinco fases mapeadas</div>
+      </div>
+      <div style="grid-column:span 4;border:1px solid var(--campo-2);border-top:8px solid var(--c-infra);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-infra)">Fase 01</div>
+        <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;margin:0">Antes de participar</h3>
+        <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Contexto de vulnerabilidade: renda, comorbidades, luto, isolamento agravado pela pandemia. Os participantes justificavam suas respostas sobre sintomas pelo contexto social em que vivem.</p>
+      </div>
+      <div style="grid-column:span 4;border:1px solid var(--campo-2);border-top:8px solid var(--c-inter);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-inter)">Fase 02</div>
+        <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;margin:0">O convite</h3>
+        <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Mensagem de desconhecido no WhatsApp, seguida de ligação horas depois. Mistura de desconfiança e curiosidade; verificação na UBS ou com familiares.</p>
+      </div>
+      <div style="grid-column:span 4;border:1px solid var(--campo-2);border-top:8px solid var(--c-humano);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-humano)">Fase 03</div>
+        <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;margin:0">Entrevista de recrutamento</h3>
+        <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Muitas perguntas estruturadas por telefone. O participante tenta conversar entre as perguntas. Primeiro momento em que se sente ouvido.</p>
+      </div>
+      <div style="grid-column:span 4;border:1px solid var(--campo-2);border-top:8px solid var(--c-acao);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-acao)">Fase 04</div>
+        <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;margin:0">Recebendo a intervenção</h3>
+        <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">De 8 a 11 mensagens por semana, durante 6 semanas. Ponto de bifurcação: quem se identifica com a personagem faz a atividade e segue; quem não se identifica conclui que o programa não é para ele e para de ouvir.</p>
+      </div>
+      <div style="grid-column:span 4;border:1px solid var(--campo-2);border-top:8px solid var(--c-atencao);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-atencao)">Fase 05</div>
+        <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;margin:0">Entrevistas de seguimento</h3>
+        <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Um mês e meio e três meses e meio depois. Percebidas como acolhimento e pertencimento, não como avaliação.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 7">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Achado 3 · Atores</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Usuário e equipe organizavam o ecossistema de formas incompatíveis</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0 0 14px">Quem criou a intervenção pensava em três blocos: grupo de pesquisa, sistema de saúde e participantes. O usuário via dois: sistema de saúde e rede de apoio, sem distinguir o que era o Viva Vida do que era o SUS. Essa divergência de modelo mental explica boa parte das expectativas frustradas de continuidade do cuidado.</p>
+        <p style="font-size:14px;line-height:1.6;margin:0;color:var(--campo-3)">Filhos e familiares apareceram como atores decisivos: eram eles que verificavam a legitimidade do programa, ensinavam a abrir o áudio e emprestavam o próprio celular. O acesso à intervenção dependia de gente que não estava no desenho do serviço.</p>
+      </div>
+      <div style="grid-column:9/span 4;border:1px solid var(--campo-2);padding:32px;background:var(--campo-1)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Barreiras de acesso</div>
+        <h3 style="font-family:var(--ff-display);font-size:21px;text-transform:uppercase;margin:0 0 16px">O que impediu o uso pleno</h3>
+        <p style="font-size:14px;line-height:1.7;margin:0">Baixa literacia digital, problemas técnicos e de sinal, acessibilidade auditiva e visual, analfabetismo e estigma em torno da depressão. Somados a barreiras contextuais: pandemia de covid-19, doenças crônicas e restrição financeira.</p>
+      </div>
     </div>
   </section>
 
@@ -160,13 +246,49 @@
     <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
       <div style="grid-column:1/span 7;border:1px solid var(--campo-2);border-left:8px solid var(--c-acao);padding:32px;background:var(--campo-0)">
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Decisão de método</div>
-        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.05;text-transform:uppercase;margin:0 0 14px">Entrevista em profundidade, com survey e grupo focal descartados.</h2>
-        <p style="font-size:14px;line-height:1.6;margin:0">A entrevista foi a única técnica que permitia mapear os stakeholders em volta do idoso, construir uma jornada aprofundada e trazer à tona pontos que essa população não verbaliza espontaneamente em formatos mais rígidos.</p>
+        <h2 style="font-family:var(--ff-display);font-size:28px;line-height:1.05;text-transform:uppercase;margin:0 0 14px">Entrevista em profundidade, com survey e grupo focal descartados.</h2>
+        <p style="font-size:14px;line-height:1.6;margin:0">A entrevista foi a única técnica que permitia mapear os atores em volta do idoso, construir a jornada em profundidade e trazer à tona pontos que essa população não verbaliza espontaneamente em formatos mais rígidos. A escolha custou caro em tempo de análise: entrevistas de até três horas, cinco entrevistadores para padronizar e um piloto antes de rodar.</p>
       </div>
-      <div style="grid-column:8/span 5;border:1px solid var(--campo-2);padding:32px;background:var(--campo-1)">
+      <div style="grid-column:9/span 4;border:1px solid var(--campo-2);padding:32px;background:var(--campo-1)">
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ O que ficou de fora</div>
-        <h3 style="font-family:var(--ff-display);font-size:22px;text-transform:uppercase;margin:0 0 18px">E por quê</h3>
+        <h3 style="font-family:var(--ff-display);font-size:21px;text-transform:uppercase;margin:0 0 18px">E por quê</h3>
         <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px"><li style="padding-left:18px;border-left:2px solid var(--c-decisao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Survey</b><span style="font-size:14px;line-height:1.6">Baixa literacia da população estudada. As respostas não sustentariam a análise.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-humano)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Grupo focal</b><span style="font-size:14px;line-height:1.6">Crise sanitária da covid-19, com participantes em grupo de risco. Reunir presencialmente estava fora de questão.</span></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 12">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Do achado à decisão de design</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;text-transform:uppercase;letter-spacing:-0.01em;margin:0 0 4px">Quatro recomendações, cada uma amarrada a um achado</h2>
+      </div>
+      <div class="gwrap" style="grid-column:1/span 12;display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gutter)">
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-humano);padding:28px;background:var(--campo-0)">
+          <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:10px">§ Porque o acesso dependia de terceiros</div>
+          <h3 style="font-family:var(--ff-display);font-size:21px;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 10px">Projetar para a rede de apoio, não só para o usuário</h3>
+          <p style="font-size:14px;line-height:1.6;margin:0">Filhos e familiares foram decisivos para o engajamento e para a construção das habilidades digitais que viabilizaram o uso. Desenhos futuros devem tratar essa rede como parte ativa do serviço, com material e canal próprios.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-inter);padding:28px;background:var(--campo-0)">
+          <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:10px">§ Porque usuário e equipe divergiam</div>
+          <h3 style="font-family:var(--ff-display);font-size:21px;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 10px">Distinguir o programa do serviço de saúde</h3>
+          <p style="font-size:14px;line-height:1.6;margin:0">O usuário não separa o Viva Vida do SUS. Sem sinalização clara do que é a intervenção e do que é atendimento, o programa herda expectativas de continuidade de cuidado que não pode cumprir.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-acao);padding:28px;background:var(--campo-0)">
+          <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:10px">§ Porque o canal traz significado prévio</div>
+          <h3 style="font-family:var(--ff-display);font-size:21px;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 10px">Explorar os limites reais do WhatsApp</h3>
+          <p style="font-size:14px;line-height:1.6;margin:0">O usuário chega com repertório de uso (ferramenta de conversa) e a plataforma tem funções pré-definidas que limitam o uso clínico. Chamadas, grupos e outros formatos seguem inexplorados frente à necessidade de socialização que apareceu no campo.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-atencao);padding:28px;background:var(--campo-0)">
+          <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:10px">§ Porque as barreiras eram sociais, não só de usabilidade</div>
+          <h3 style="font-family:var(--ff-display);font-size:21px;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 10px">Cocriação desde o protocolo, não só na avaliação</h3>
+          <p style="font-size:14px;line-height:1.6;margin:0">Envolver pacientes, profissionais e gestores no desenho de intervenções semelhantes. A recomendação vai além do produto: métodos cocriativos podem informar o próprio protocolo clínico, dos critérios de inclusão aos desfechos secundários.</p>
+        </div>
+      </div>
+      <div class="quote-grid" style="grid-column:1/span 12;padding:36px 44px;border:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0);display:grid;grid-template-columns:60px 1fr 220px;gap:28px;align-items:center">
+        <div style="font-family:var(--ff-display);font-size:64px;line-height:0.7;color:var(--c-atencao);font-weight:900">"</div>
+        <div style="font-family:var(--ff-display);font-size:22px;line-height:1.24;font-weight:700;letter-spacing:-0.005em">Apesar das barreiras, participantes relataram que o programa os ajudou a se sentirem melhor, a se motivarem, a aprenderem sobre depressão, a prevenir o suicídio e a desabafar.</div>
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-4);line-height:1.7;text-align:right">Síntese dos achados<br/>·<br/>dissertação, FAUUSP 2024</div>
       </div>
     </div>
   </section>
