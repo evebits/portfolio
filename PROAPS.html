@@ -13,17 +13,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&family=Barlow+Semi+Condensed:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"></link>
   <title>PROAPS, Programa de Fortalecimento em Saúde Mental na Atenção Primária | Evelyn Bitencourt</title>
   <meta name="description" content="Redesenho iterativo de programa de fortalecimento em saúde mental para o SUS, de um curso único a três trilhas por categoria profissional."></meta>
-  <link rel="canonical" href="https://evelynsbitencourt.netlify.app/PROAPS.dc.html"></link>
+  <link rel="canonical" href="https://evelynsbitencourt.netlify.app/PROAPS.html"></link>
   <meta property="og:type" content="article"></meta>
   <meta property="og:title" content="PROAPS, Programa de Fortalecimento em Saúde Mental na Atenção Primária"></meta>
   <meta property="og:description" content="Redesenho iterativo de programa de fortalecimento em saúde mental para o SUS, em três trilhas por categoria profissional."></meta>
-  <meta property="og:url" content="https://evelynsbitencourt.netlify.app/PROAPS.dc.html"></meta>
+  <meta property="og:url" content="https://evelynsbitencourt.netlify.app/PROAPS.html"></meta>
   <meta property="og:image" content="https://evelynsbitencourt.netlify.app/images/proaps-cover.jpg"></meta>
   <meta name="twitter:card" content="summary_large_image"></meta>
   <meta name="twitter:title" content="PROAPS, Programa de Fortalecimento em Saúde Mental na Atenção Primária"></meta>
   <meta name="twitter:description" content="Diagnóstico e redesenho de serviço da qualificação em saúde mental na APS do SUS."></meta>
   <meta name="twitter:image" content="https://evelynsbitencourt.netlify.app/images/proaps-cover.jpg"></meta>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"PROAPS, Formação em Saúde Mental na APS","author":{"@type":"Person","name":"Evelyn Bitencourt"},"about":"Redesenho de serviço de qualificação em saúde mental na Atenção Primária à Saúde do SUS","url":"https://evelynsbitencourt.netlify.app/PROAPS.dc.html"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"PROAPS, Formação em Saúde Mental na APS","author":{"@type":"Person","name":"Evelyn Bitencourt"},"about":"Redesenho de serviço de qualificação em saúde mental na Atenção Primária à Saúde do SUS","url":"https://evelynsbitencourt.netlify.app/PROAPS.html"}</script>
   <style>
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -36,22 +36,34 @@
     @media (max-width:991.98px){
       .site-nav{display:none !important}
       .hamburger{display:flex !important}
-    }
-    @media (max-width:991.98px){
-      .gwrap{grid-template-columns:repeat(2,1fr) !important}
-      .gwrap>*{grid-column:span 1 !important}
+      header{grid-template-columns:1fr 44px !important;gap:16px !important}
+      header>a{grid-column:1 !important;font-size:17px !important}
+      header>.hamburger{grid-column:2 !important}
+      header>nav{grid-column:1/-1 !important}
+      .gwrap,section[style*="repeat(12"],footer[style*="repeat(12"]{grid-template-columns:repeat(2,1fr) !important}
+      .gwrap>*,section[style*="repeat(12"]>*,footer[style*="repeat(12"]>*{grid-column:span 1 !important}
+      .gwrap>[style*="span 12"],section[style*="repeat(12"]>[style*="span 12"],footer[style*="repeat(12"]>[style*="span 12"]{grid-column:1/-1 !important}
+      .gwrap .gwrap{grid-column:1/-1 !important;grid-template-columns:1fr !important}
+      [style*="absolute"]{grid-column:auto !important}
+      .quote-grid{grid-template-columns:1fr !important;gap:16px !important}
+      .quote-grid>*:last-child{text-align:left !important}
       .hero-box{padding:36px !important}
+      [style*="340px"]{flex:0 0 300px !important}
     }
     @media (max-width:768px){
-      .gwrap{grid-template-columns:1fr !important}
-      .gwrap>*{grid-column:1/-1 !important}
+      .gwrap,section[style*="repeat(12"],footer[style*="repeat(12"]{grid-template-columns:1fr !important}
+      .gwrap>*,section[style*="repeat(12"]>*,footer[style*="repeat(12"]>*{grid-column:1/-1 !important}
+      [style*="absolute"]{grid-column:auto !important}
       section,header,footer{padding-left:28px !important;padding-right:28px !important}
-      .quote-grid{grid-template-columns:1fr !important}
-      .quote-grid>*{grid-column:auto !important;text-align:left !important}
+      h1{font-size:34px !important}
+      [style*="340px"]{flex:0 0 82vw !important}
     }
     @media (max-width:575.98px){
       section,header,footer{padding-left:16px !important;padding-right:16px !important}
+      a[href*="teses.usp.br"]{grid-template-columns:1fr !important;gap:14px !important;padding:24px !important}
+      h1{font-size:28px !important}
       .hero-box{padding:24px !important}
+      .quote-grid{padding:24px !important}
     }
     a:focus-visible, button:focus-visible{outline:3px solid #E11D4F;outline-offset:2px}
     .skip-link{position:absolute;left:-9999px;top:0;background:#141414;color:#F5F4F0;padding:12px 20px;z-index:100;font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:0.08em}
