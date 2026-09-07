@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /uploads/
+Disallow: /design_handoff_portfolio_evelyn/
+
+Sitemap: https://evelynsbitencourt.netlify.app/sitemap.xml
