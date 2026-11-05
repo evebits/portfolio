@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"></link>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&family=Barlow+Semi+Condensed:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"></link>
+  <title>Legal Design System, Diagnosis and Redesign | Evelyn Bitencourt</title>
+  <meta name="description" content="Take-home exercise for a legal tech company's hiring process: diagnosis, design system and incremental redesign of legal software, from 3m28s to see what is due today to a workspace sorted by urgency."></meta>
+  <link rel="canonical" href="https://evelynsbitencourt.netlify.app/en/DesignSystemJuridico.html"></link>
+  <link rel="alternate" hreflang="pt-BR" href="https://evelynsbitencourt.netlify.app/DesignSystemJuridico.html"></link>
+  <link rel="alternate" hreflang="en" href="https://evelynsbitencourt.netlify.app/en/DesignSystemJuridico.html"></link>
+  <link rel="alternate" hreflang="x-default" href="https://evelynsbitencourt.netlify.app/DesignSystemJuridico.html"></link>
+  <meta property="og:type" content="article"></meta>
+  <meta property="og:title" content="Legal Design System, Diagnosis and Redesign"></meta>
+  <meta property="og:description" content="Take-home exercise for a legal tech company's hiring process: diagnosis, design system and incremental redesign of legal software, from 3m28s to see what is due today to a workspace sorted by urgency."></meta>
+  <meta property="og:url" content="https://evelynsbitencourt.netlify.app/en/DesignSystemJuridico.html"></meta>
+  <meta property="og:image" content="https://evelynsbitencourt.netlify.app/images/ds-juridico-depois.png"></meta>
+  <meta name="twitter:card" content="summary_large_image"></meta>
+  <meta name="twitter:title" content="Legal Design System, Diagnosis and Redesign"></meta>
+  <meta name="twitter:description" content="Take-home exercise for a legal tech company's hiring process: diagnosis, design system and incremental redesign of legal software, from 3m28s to see what is due today to a workspace sorted by urgency."></meta>
+  <meta name="twitter:image" content="https://evelynsbitencourt.netlify.app/images/ds-juridico-depois.png"></meta>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Legal Design System","author":{"@type":"Person","name":"Evelyn Bitencourt"},"about":"Legal Design System, Diagnosis and Redesign","url":"https://evelynsbitencourt.netlify.app/en/DesignSystemJuridico.html","inLanguage":"en"}</script>
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    [id]{scroll-margin-top:104px}
+    body{margin:0;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:#E11D4F}
+    a:hover{color:#F2672A}
+    img{max-width:100%}
+    .hamburger{display:none}
+    .lang-mobile{display:none}
+    @media (max-width:991.98px){
+      .site-nav{display:none !important}
+      .hamburger{display:flex !important}
+      header{grid-template-columns:1fr auto 44px !important;gap:12px !important}
+      .lang-mobile{display:flex !important;grid-column:2 !important}
+      header>a{grid-column:1 !important;font-size:17px !important}
+      header>.hamburger{grid-column:3 !important}
+      header>nav{grid-column:1/-1 !important}
+      .gwrap,section[style*="repeat(12"],footer[style*="repeat(12"]{grid-template-columns:repeat(2,1fr) !important}
+      .gwrap>*,section[style*="repeat(12"]>*,footer[style*="repeat(12"]>*{grid-column:span 1 !important}
+      .gwrap>[style*="span 12"],section[style*="repeat(12"]>[style*="span 12"],footer[style*="repeat(12"]>[style*="span 12"]{grid-column:1/-1 !important}
+      .gwrap .gwrap{grid-column:1/-1 !important;grid-template-columns:1fr !important}
+      [style*="absolute"]{grid-column:auto !important}
+      .quote-grid{grid-template-columns:1fr !important;gap:16px !important}
+      .quote-grid>*:last-child{text-align:left !important}
+      .hero-box{padding:36px !important}
+      [style*="340px"]{flex:0 0 300px !important}
+    }
+    @media (max-width:768px){
+      .gwrap,section[style*="repeat(12"],footer[style*="repeat(12"]{grid-template-columns:1fr !important}
+      .gwrap>*,section[style*="repeat(12"]>*,footer[style*="repeat(12"]>*{grid-column:1/-1 !important}
+      [style*="absolute"]{grid-column:auto !important}
+      section,header,footer{padding-left:28px !important;padding-right:28px !important}
+      h1{font-size:34px !important}
+      [style*="340px"]{flex:0 0 82vw !important}
+    }
+    @media (max-width:575.98px){
+      section,header,footer{padding-left:16px !important;padding-right:16px !important}
+      a[href*="teses.usp.br"]{grid-template-columns:1fr !important;gap:14px !important;padding:24px !important}
+      h1{font-size:28px !important}
+      .hero-box{padding:24px !important}
+      .quote-grid{padding:24px !important}
+    }
+    a:focus-visible, button:focus-visible{outline:3px solid #E11D4F;outline-offset:2px}
+    .skip-link{position:absolute;left:-9999px;top:0;background:#141414;color:#F5F4F0;padding:12px 20px;z-index:100;font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:0.08em}
+    .skip-link:focus{left:16px;top:16px}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:0.01ms !important;transition-duration:0.01ms !important;transition-delay:0 !important}}
+  </style>
+</helmet>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div style="--ff-body:'Mulish',system-ui,sans-serif;--ff-display:'Barlow Semi Condensed',Impact,sans-serif;--ff-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--campo-0:#F5F4F0;--campo-1:#ECEAE3;--campo-2:#141414;--campo-3:#5A5A5A;--campo-4:#B5B2A8;--c-infra:#352A87;--c-inter:#6526A5;--c-humano:#A61F8C;--c-decisao:#E11D4F;--c-acao:#F2672A;--c-atencao:#E9BD3A;--gutter:24px;--margin:64px;font-family:var(--ff-body);color:var(--campo-2);background:var(--campo-0);max-width:none;margin:0 auto;position:relative;line-height:1.5;font-size:16px;">
+
+  <header style="position:sticky;top:0;z-index:20;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);padding:22px var(--margin);align-items:center;border-bottom:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0)" style-before="content:'';position:absolute;left:0;top:0;bottom:0;width:8px;background:linear-gradient(180deg,var(--c-infra) 0 16.6%,var(--c-inter) 16.6% 33.3%,var(--c-humano) 33.3% 50%,var(--c-decisao) 50% 66.6%,var(--c-acao) 66.6% 83.3%,var(--c-atencao) 83.3% 100%)">
+    <a href="index.html" style="grid-column:1/span 5;font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:0.04em;font-weight:800;white-space:nowrap;color:var(--campo-0);text-decoration:none;transition:color .2s ease" style-hover="color:var(--c-atencao)">EVELYN BITENCOURT</a>
+    <nav class="site-nav" aria-label="Main navigation" style="grid-column:6/span 7;display:flex;gap:32px;justify-content:flex-end;align-items:center;font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em">
+      <a href="index.html#projetos" style="color:var(--campo-0);opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">← All projects</a>
+      <a href="index.html#contato" style="color:var(--campo-2);background:var(--c-atencao);padding:9px 18px;font-weight:600;opacity:1;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 4px 0 rgba(245,244,240,0.35)" style-active="transform:translateY(0);box-shadow:none">Contact</a>
+      <div class="lang-switch" role="group" aria-label="Language" style="display:flex;border:1px solid rgba(245,244,240,0.4);font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;"><a href="../DesignSystemJuridico.html" hreflang="pt-BR" lang="pt-BR" aria-label="Read in Portuguese" style="padding:7px 10px;color:var(--campo-0);text-decoration:none;opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">PT</a><a href="DesignSystemJuridico.html" hreflang="en" lang="en" aria-current="page" style="padding:7px 10px;background:var(--campo-0);color:var(--campo-2);font-weight:600;text-decoration:none">EN</a></div>
+    </nav>
+    <div class="lang-mobile" role="group" aria-label="Language" style="display:flex;border:1px solid rgba(245,244,240,0.4);font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;display:none;align-self:center"><a href="../DesignSystemJuridico.html" hreflang="pt-BR" lang="pt-BR" aria-label="Read in Portuguese" style="padding:7px 10px;color:var(--campo-0);text-decoration:none;opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">PT</a><a href="DesignSystemJuridico.html" hreflang="en" lang="en" aria-current="page" style="padding:7px 10px;background:var(--campo-0);color:var(--campo-2);font-weight:600;text-decoration:none">EN</a></div>
+    <button class="hamburger" onClick="{{ toggleNav }}" aria-label="Open navigation menu" aria-expanded="{{ navOpen }}" aria-controls="mobile-nav" style="display:none;grid-column:12/span 1;justify-self:end;width:44px;height:44px;border:1px solid var(--campo-0);background:transparent;color:var(--campo-0);font-size:20px;line-height:1;align-items:center;justify-content:center;cursor:pointer;transition:background .18s ease,color .18s ease" style-hover="background:var(--campo-0);color:var(--campo-2)">{{ navIcon }}</button>
+    <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
+      <nav id="mobile-nav" aria-label="Main navigation (mobile)" style="grid-column:1/-1;display:flex;flex-direction:column;padding:8px 0 4px;border-top:1px solid rgba(245,244,240,0.15);margin-top:16px;font-family:var(--ff-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.08em">
+        <a href="index.html#projetos" style="color:var(--campo-0);padding:14px 0;border-bottom:1px solid rgba(245,244,240,0.1)">← All projects</a>
+        <a href="index.html#contato" style="color:var(--campo-2);background:var(--c-atencao);padding:12px 18px;font-weight:600;width:fit-content;margin-top:14px">Contact</a>
+      </nav>
+    </sc-if>
+  </header>
+
+  <section id="main-content" style="position:relative;padding:80px var(--margin) 56px;border-bottom:1px solid var(--campo-2);display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+    <div class="hero-box gwrap" style="grid-column:1/span 12;border:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0);padding:48px;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);position:relative;overflow:hidden">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:10px;background:var(--c-infra)"></div>
+      <div style="grid-column:1/span 3;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;line-height:2;color:var(--campo-4)">
+        Institution<b style="display:block;color:var(--campo-0);font-weight:500">Hiring process · legal tech</b>
+        Period<b style="display:block;color:var(--campo-0);font-weight:500">2026 · 4 days</b>
+        Scale<b style="display:block;color:var(--campo-0);font-weight:500">20 screens audited · 5 problems · 13 DS sections</b>
+        Function<b style="display:block;color:var(--campo-0);font-weight:500">Diagnosis, design system and incremental redesign</b>
+        Role<b style="display:block;color:var(--campo-0);background:var(--c-infra);width:fit-content;padding:2px 6px">Design System</b>
+      </div>
+      <div style="grid-column:5/span 8">
+        <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--c-atencao);margin-bottom:16px">Hiring exercise · Senior UX Designer</div>
+        <h1 style="font-family:var(--ff-display);font-size:44px;line-height:0.92;letter-spacing:-0.02em;font-weight:900;margin:0 0 20px;text-transform:uppercase;overflow-wrap:anywhere"><span style="color:var(--c-atencao)">3m28s</span> to see what is due today. The target is 30 seconds.</h1>
+        <p style="font-size:17px;line-height:1.55;max-width:640px;margin:0;opacity:0.88">Diagnosis, design system and incremental redesign of practice management software for law firms. Everything ties back to one problem: lawyers cannot miss a deadline, and today the interface doesn't let them see one.</p>
+        <p style="margin:20px 0 0;font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;line-height:1.6;border:1px solid rgba(245,244,240,0.35);padding:10px 14px;width:fit-content;max-width:640px;color:var(--campo-0)">Take-home exercise for a hiring process, done in 4 days on a trial account. Not commissioned by the company and not implemented in the product.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <figure style="grid-column:1/span 6;margin:0;border:1px solid var(--campo-2);background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;padding:10px 16px;border-bottom:1px solid var(--campo-2);display:flex;gap:12px;align-items:center"><span style="background:var(--c-decisao);color:var(--campo-0);padding:3px 8px">Before</span><span style="color:var(--campo-3)">Current workspace · tasks only, overdue items in a chart, deadlines and hearings out of view</span></div>
+        <img src="../images/ds-juridico-antes.png" alt="Current workspace, with a task list and activity chart" style="width:100%;height:auto;display:block" />
+      </figure>
+      <figure style="grid-column:7/span 6;margin:0;border:1px solid var(--campo-2);background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;padding:10px 16px;border-bottom:1px solid var(--campo-2);display:flex;gap:12px;align-items:center"><span style="background:var(--c-humano);color:var(--campo-0);padding:3px 8px">After</span><span style="color:var(--campo-3)">Proposal · overdue, today and tomorrow in a single list, with the count next to the title</span></div>
+        <img src="../images/ds-juridico-depois.png" alt="Redesigned workspace, with activities grouped by urgency" style="width:100%;height:auto;display:block" />
+      </figure>
+      <div style="grid-column:1/span 7">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Problem</div>
+        <h2 style="font-family:var(--ff-display);font-size:32px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Three screens, three overdue counts.</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;">33% of votes on the feedback portal ask for the same thing: don't miss deadlines. I tested that task on a trial account. It took me 3m28s to find out what was due that day, and the interface itself showed 1, 5 and 13 overdue items depending on the screen. For anyone working with court deadlines, an inconsistent count is worse than none.</p>
+      </div>
+      <div style="grid-column:9/span 4;border:1px solid var(--campo-2);border-left:8px solid var(--c-infra);padding:32px;background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ My role</div>
+        <h2 style="font-family:var(--ff-display);font-size:23px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Take-home exercise, from diagnosis to component</h2>
+        <p style="font-size:14px;line-height:1.6;margin:0">Individual case for a legal tech company's hiring process for a Senior UX Designer. I did the diagnosis, principles, design system architecture and governance, migration plan and components, with no access to users, the team or the code.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 5">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Diagnosis</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Creating a task works. Creating a deadline doesn't.</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;">I combined three sources: portal votes, a task script tested on the trial, and a heuristic review of 20 audited screens. The table shows the core finding: the flow that matters most to lawyers is the one that fails most. A deadline saved as a task gets no alert.</p>
+      </div>
+      <div style="grid-column:7/span 6;border:1px solid var(--campo-2);background:var(--campo-0)">
+        <div style="display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:12px;padding:12px 16px;border-bottom:1px solid var(--campo-4);font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3)"><span>Task</span><span>Result</span><span>Time</span><span>Clicks</span></div>
+        <div style="display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:12px;padding:12px 16px;border-bottom:1px solid var(--campo-4);font-size:14px"><span>Create task</span><span><span style="color:var(--c-humano);font-weight:700">Succeeded</span></span><span>1m39s</span><span>2</span></div>
+        <div style="display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:12px;padding:12px 16px;border-bottom:1px solid var(--campo-4);font-size:14px"><span>Create hearing</span><span><b style="color:var(--c-decisao)">Failed</b></span><span>2m13s</span><span>5</span></div>
+        <div style="display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:12px;padding:12px 16px;border-bottom:1px solid var(--campo-4);font-size:14px"><span><b>Create deadline</b></span><span><b style="color:var(--c-decisao)">Failed</b></span><span>2m51s</span><span>8</span></div>
+        <div style="display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:12px;padding:12px 16px;border-bottom:1px solid var(--campo-4);font-size:14px"><span>Deadline from a court notice</span><span><span style="color:var(--c-humano);font-weight:700">Succeeded</span></span><span>2m48s</span><span>3</span></div>
+        <p style="font-size:13px;line-height:1.55;margin:0;padding:14px 16px;color:var(--campo-3)">The full test and user stories are in the case's analysis spreadsheet.</p>
+      </div>
+      <div class="gwrap" style="grid-column:1/span 12;display:grid;grid-template-columns:repeat(5,1fr);gap:var(--gutter)">
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-decisao);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">1 · Severity 4/4</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">The workspace doesn't show the day</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Today's hearing stays out of view.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-decisao);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">2 · Severity 4/4</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Deadline and hearing outside the mental model</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">A deadline saved as a task gets no alert.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-decisao);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">3 · Severity 4/4</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Inconsistent overdue count</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Calendar and workspace use different rules.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-acao);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">4 · Severity 3/4</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Invalid default values</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">00:00 is rejected and the deadline gets no alert.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-atencao);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">5 · Severity 2/4</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Activities displayed in different ways</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Type and case only appear in the Calendar.</p>
+        </div>
+      </div>
+      <p style="grid-column:1/span 12;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin:0">Severity from 1 to 4, combining frequency and impact on the risk of missing a deadline.</p>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 12">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Principles</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Five decision rules, each tied to a problem</h2>
+      </div>
+      <div class="gwrap" style="grid-column:1/span 12;display:grid;grid-template-columns:repeat(5,1fr);gap:var(--gutter)">
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-infra);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Problem 1</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">1. Show the day on one screen</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Deadlines, hearings, tasks and events in one list, by urgency.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-infra);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Problem 3</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">2. Keep overdue items visible</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Overdue stays on screen until resolved, with color, icon and text.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-infra);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Problems 2 and 4</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">3. Use the firm's vocabulary</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Names and defaults that make sense to lawyers.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-infra);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Problem 5</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">4. Standardize the activity</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">The same row in every module.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-infra);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">All</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">5. Change gradually, with one exception</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Without breaking what users know. The exception is the overdue color.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 6">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Design system · architecture</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Start with tokens, because they enter the legacy code without touching templates</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;">The product runs on AngularJS. CSS variables are the only change that reaches the whole product at once without rewriting screens. So the system was designed in four layers, bottom-up.</p>
+        <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px">
+          <div style="display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;font-size:14px;line-height:1.5"><span style="font-family:var(--ff-display);font-weight:900;font-size:22px;color:var(--c-infra)">1</span><span><b>Foundations.</b> Color, typography (Nunito Sans, already in the product), 4 px spacing scale, shape and icons.</span></div>
+          <div style="display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;font-size:14px;line-height:1.5"><span style="font-family:var(--ff-display);font-weight:900;font-size:22px;color:var(--c-infra)">2</span><span><b>Three-tier tokens.</b> Primitive holds the value, semantic holds the intent, component binds intent to the part.</span></div>
+          <div style="display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;font-size:14px;line-height:1.5"><span style="font-family:var(--ff-display);font-weight:900;font-size:22px;color:var(--c-infra)">3</span><span><b>Components.</b> Button, Input, Badge and Toast, then ActivityItem, WidgetCard and Modal.</span></div>
+          <div style="display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;font-size:14px;line-height:1.5"><span style="font-family:var(--ff-display);font-weight:900;font-size:22px;color:var(--c-infra)">4</span><span><b>Patterns.</b> Create activity, filtered lists and dashboard.</span></div>
+        </div>
+      </div>
+      <figure style="grid-column:7/span 6;margin:0;border:1px solid var(--campo-2);background:var(--campo-0)">
+        <img src="../images/ds-juridico-tokens.png" alt="Design system tokens page, with the three tiers and the semantic table" style="width:100%;height:auto;display:block" />
+        <figcaption style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);padding:12px 16px;border-top:1px solid var(--campo-2)">Tokens · single source in tokens.json, exported to Figma and CSS</figcaption>
+      </figure>
+      <div style="grid-column:1/span 12;border:1px solid var(--campo-2);border-left:8px solid var(--c-decisao);padding:28px 32px;background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ First visible effect</div>
+        <p style="font-family:var(--ff-display);font-size:26px;line-height:1.1;text-transform:uppercase;font-weight:800;margin:0">Three shades of danger red become one token: feedback-danger.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 7">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Governance</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">A component only joins the system if two squads use it</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;">Any designer can propose; triage is weekly. If two or more squads use it, it becomes a system component. If not, it stays local for a quarter. The design specialist, front-end engineer and tech lead decide together, with tie-breaks by area: engineering on feasibility, design on visuals.</p>
+        <p style="font-size:14px;line-height:1.6;margin:14px 0 0;color:var(--campo-3)">Figma and code share the same status (draft, beta, stable, deprecated). A component is only "done" with Figma, code and documentation.</p>
+      </div>
+      <figure style="grid-column:8/span 5;margin:0;border:1px solid var(--campo-2);background:var(--campo-0)">
+        <img src="../images/ds-juridico-capa.png" alt="Design system cover with the 13 documentation sections" style="width:100%;height:auto;display:block" />
+        <figcaption style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);padding:12px 16px;border-top:1px solid var(--campo-2)">Design system v0.3 beta · 13 sections, WCAG 2.1 AA (Web Content Accessibility Guidelines)</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 12">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Migration plan</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Four phases, from lowest to highest risk</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;max-width:860px;margin-bottom:8px">Priority: frequency of use × consistency or usability problem ÷ effort. New and old screens coexist during migration: swap component by component, and structural changes ship whole, behind a feature flag.</p>
+      </div>
+      <div class="gwrap" style="grid-column:1/span 12;display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gutter)">
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--campo-3);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Phase 0</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Tokens</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Across the product. Sets up the overdue color.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-infra);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Phase 1</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Basic components</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Button, fields, Modal, Toast and Badge. Solves problem 4.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-humano);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Phase 2</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Core flows</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Create activity and the workspace, with ActivityItem and WidgetCard. Solves problems 1, 2, 3 and 5.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-acao);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Phase 3</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Everything else</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">The long tail and retiring the legacy.</p>
+        </div>
+      </div>
+      <figure style="grid-column:1/span 12;margin:0;border:1px solid var(--campo-2);background:var(--campo-0)">
+        <img src="../images/ds-juridico-activityitem.png" alt="ActivityItem in eight states: default, hover, focus, overdue, done, loading, empty and error" style="width:100%;height:auto;display:block" />
+        <figcaption style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);padding:12px 16px;border-top:1px solid var(--campo-2)">ActivityItem · one row for any activity, in every module</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 6">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Hard decision</div>
+        <h2 style="font-family:var(--ff-display);font-size:32px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Deadlines stop being red.</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;">Today the Deadline type uses the same red as overdue dates. On one screen, a deadline three weeks out and an overdue task look identical. I considered three options:</p>
+        <div style="margin-top:18px;display:flex;flex-direction:column;gap:10px">
+          <div style="display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:14px;line-height:1.5;padding:10px 12px;"><b style="font-family:var(--ff-mono)">A</b><span><b>Keep deadlines red</b> and mark overdue only with icon and text. Respects habit, but the color keeps two meanings.</span></div>
+          <div style="display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:14px;line-height:1.5;padding:10px 12px;background:var(--campo-1);border:1px solid var(--campo-2)"><b style="font-family:var(--ff-mono)">B</b><span><b>Deadlines in wine, red only for overdue.</b> Chosen. Each color has one meaning, and the type is still written on the Badge.</span></div>
+          <div style="display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:14px;line-height:1.5;padding:10px 12px;"><b style="font-family:var(--ff-mono)">C</b><span><b>Four colors by urgency</b>, as suggested on the portal. Clashes with the type colors and clutters the list.</span></div>
+        </div>
+      </div>
+      <figure style="grid-column:7/span 6;margin:0;border:1px solid var(--campo-2);background:var(--campo-0)">
+        <img src="../images/ds-juridico-decisao.png" alt="Before and after: red with two meanings and red only for overdue" style="width:100%;height:auto;display:block" />
+        <figcaption style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);padding:12px 16px;border-top:1px solid var(--campo-2)">Before and after · one color, one meaning</figcaption>
+      </figure>
+      <div style="grid-column:1/span 12;border:1px solid var(--campo-2);border-left:8px solid var(--c-atencao);padding:32px;background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ The exception</div>
+        <h2 style="font-family:var(--ff-display);font-size:24px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">The only change that goes against "change gradually"</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;max-width:960px">A color with two meanings during migration is worse than an abrupt switch: on one screen red would mean deadline, on another overdue, and lawyers would be back to not knowing what has expired. So the switch ships in Phase 0, through the activity-prazo token, across Calendar, Kanban and modals in the same release. The cost is breaking the habit of seeing deadlines in red. The mitigation is a first-click test before release: "which items are overdue?".</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 12">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ How to know it worked</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">The targets come from the test itself</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;max-width:860px;margin-bottom:8px">This case has no measured outcome: it is a proposal. The user metrics start from what the trial test showed, so before and after are comparable.</p>
+      </div>
+      <div class="gwrap" style="grid-column:1/span 12;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gutter)">
+        <div style="border:1px solid var(--campo-2);padding:24px;background:var(--c-infra);color:var(--campo-0);display:flex;flex-direction:column;justify-content:space-between;min-height:150px">
+          <div style="font-family:var(--ff-display);font-size:44px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">3m28s → 30s</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;opacity:0.82">Time to see what is due today</div>
+        </div>
+        <div style="border:1px solid var(--campo-2);padding:24px;background:var(--campo-0);color:var(--campo-2);display:flex;flex-direction:column;justify-content:space-between;min-height:150px">
+          <div style="font-family:var(--ff-display);font-size:44px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">3 → 1</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;opacity:0.82">Different overdue counts in the product</div>
+        </div>
+        <div style="border:1px solid var(--campo-2);padding:24px;background:var(--campo-0);color:var(--campo-2);display:flex;flex-direction:column;justify-content:space-between;min-height:150px">
+          <div style="font-family:var(--ff-display);font-size:44px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">0 → 1</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;opacity:0.82">Successful deadline creations in the test</div>
+        </div>
+      </div>
+      <div style="grid-column:1/span 12;border:1px solid var(--campo-2);background:var(--campo-1);padding:28px 32px">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Hypotheses to validate before the redesign</div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+          <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;font-size:14px;line-height:1.5;padding-bottom:10px;border-bottom:1px solid var(--campo-4)"><span>The workspace isn't enough to see the day</span><span style="color:var(--campo-3)">Navigation analytics and interviews</span></li>
+          <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;font-size:14px;line-height:1.5;padding-bottom:10px;border-bottom:1px solid var(--campo-4)"><span>Deadlines are saved with the wrong type</span><span style="color:var(--campo-3)">Task titles and tree test</span></li>
+          <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;font-size:14px;line-height:1.5;padding-bottom:10px;border-bottom:1px solid var(--campo-4)"><span>Overdue counts use different rules</span><span style="color:var(--campo-3)">Engineering and support tickets</span></li>
+          <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;font-size:14px;line-height:1.5;padding-bottom:10px;border-bottom:1px solid var(--campo-4)"><span>Form defaults cause errors</span><span style="color:var(--campo-3)">Validation errors by field</span></li>
+          <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;font-size:14px;line-height:1.5;padding-bottom:10px;border-bottom:1px solid var(--campo-4)"><span>Squads lack shared components</span><span style="color:var(--campo-3)">Code, Figma and the 4 designers</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 7">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Use of AI</div>
+        <h2 style="font-family:var(--ff-display);font-size:26px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">AI sped up the audit and exploration. The decisions were mine.</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;">I logged six uses of AI during the case. In five, I adjusted the output: I redid a schedule that invented tasks outside the brief, focused the test script on deadline tasks and changed the palette red so deadline and overdue wouldn't be confused. The component inventory of the 20 screens was the only output used as is. Choosing the focus, interpreting the test and deciding on the red didn't go through the tool.</p>
+      </div>
+      <div style="grid-column:9/span 4;border:1px solid var(--campo-2);padding:28px;background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Limitations</div>
+        <p style="font-size:14px;line-height:1.6;margin:0">Individual evaluation on a trial account; votes only from portal users; no access to the team's current governance. The governance model is a starting point, to be adjusted to the existing process and the team's four designers.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:88px var(--margin);background:var(--campo-2);color:var(--campo-0);display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);position:relative;overflow:hidden" style-before="content:'';position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--c-infra) 0 16.6%,var(--c-inter) 16.6% 33.3%,var(--c-humano) 33.3% 50%,var(--c-decisao) 50% 66.6%,var(--c-acao) 66.6% 83.3%,var(--c-atencao) 83.3% 100%)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);grid-column:1/span 12">
+      <div style="grid-column:1/span 7">
+        <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-atencao);margin-bottom:18px">Contact</div>
+        <h2 style="font-family:var(--ff-display);font-size:44px;line-height:0.95;letter-spacing:-0.03em;font-weight:900;margin:0 0 24px;text-transform:uppercase">Let's find where your service <span style="color:var(--c-acao)">creates friction</span>.</h2>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:17px">
+          <a href="mailto:evelyn.bitencourt@gmail.com" style="color:var(--campo-0);border-bottom:1px solid rgba(245,244,240,0.25);width:fit-content;padding-bottom:2px;transition:color .18s ease,border-color .18s ease,padding-bottom .18s ease" style-hover="color:var(--c-atencao);border-color:var(--c-atencao);padding-bottom:5px">evelyn.bitencourt@gmail.com</a>
+          <a href="index.html#projetos" style="color:var(--campo-0);border-bottom:1px solid rgba(245,244,240,0.25);width:fit-content;padding-bottom:2px;transition:color .18s ease,border-color .18s ease,padding-bottom .18s ease" style-hover="color:var(--c-atencao);border-color:var(--c-atencao);padding-bottom:5px">← Back to all projects</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { navOpen: false };
+  renderVals() {
+    return {
+      navOpen: this.state.navOpen,
+      navIcon: this.state.navOpen ? '✕' : '☰',
+      toggleNav: () => this.setState(s => ({ navOpen: !s.navOpen })),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

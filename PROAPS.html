@@ -14,6 +14,9 @@
   <title>PROAPS, Programa de Fortalecimento em Saúde Mental na Atenção Primária | Evelyn Bitencourt</title>
   <meta name="description" content="Redesenho iterativo de programa de fortalecimento em saúde mental para o SUS, de um curso único a três trilhas por categoria profissional."></meta>
   <link rel="canonical" href="https://evelynsbitencourt.netlify.app/PROAPS.html"></link>
+  <link rel="alternate" hreflang="pt-BR" href="https://evelynsbitencourt.netlify.app/PROAPS.html"></link>
+  <link rel="alternate" hreflang="en" href="https://evelynsbitencourt.netlify.app/en/PROAPS.html"></link>
+  <link rel="alternate" hreflang="x-default" href="https://evelynsbitencourt.netlify.app/PROAPS.html"></link>
   <meta property="og:type" content="article"></meta>
   <meta property="og:title" content="PROAPS, Programa de Fortalecimento em Saúde Mental na Atenção Primária"></meta>
   <meta property="og:description" content="Redesenho iterativo de programa de fortalecimento em saúde mental para o SUS, em três trilhas por categoria profissional."></meta>
@@ -33,12 +36,14 @@
     a:hover{color:#F2672A}
     img{max-width:100%}
     .hamburger{display:none}
+    .lang-mobile{display:none}
     @media (max-width:991.98px){
       .site-nav{display:none !important}
       .hamburger{display:flex !important}
-      header{grid-template-columns:1fr 44px !important;gap:16px !important}
+      header{grid-template-columns:1fr auto 44px !important;gap:12px !important}
+      .lang-mobile{display:flex !important;grid-column:2 !important}
       header>a{grid-column:1 !important;font-size:17px !important}
-      header>.hamburger{grid-column:2 !important}
+      header>.hamburger{grid-column:3 !important}
       header>nav{grid-column:1/-1 !important}
       .gwrap,section[style*="repeat(12"],footer[style*="repeat(12"]{grid-template-columns:repeat(2,1fr) !important}
       .gwrap>*,section[style*="repeat(12"]>*,footer[style*="repeat(12"]>*{grid-column:span 1 !important}
@@ -80,7 +85,9 @@
     <nav class="site-nav" aria-label="Navegação principal" style="grid-column:6/span 7;display:flex;gap:32px;justify-content:flex-end;align-items:center;font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em">
       <a href="index.html#projetos" style="color:var(--campo-0);opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">← Todos os projetos</a>
       <a href="index.html#contato" style="color:var(--campo-2);background:var(--c-atencao);padding:9px 18px;font-weight:600;opacity:1;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 4px 0 rgba(245,244,240,0.35)" style-active="transform:translateY(0);box-shadow:none">Contato</a>
+      <div class="lang-switch" role="group" aria-label="Idioma" style="display:flex;border:1px solid rgba(245,244,240,0.4);font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;"><a href="PROAPS.html" hreflang="pt-BR" lang="pt-BR" aria-current="page" style="padding:7px 10px;background:var(--campo-0);color:var(--campo-2);font-weight:600;text-decoration:none">PT</a><a href="en/PROAPS.html" hreflang="en" lang="en" aria-label="Read in English" style="padding:7px 10px;color:var(--campo-0);text-decoration:none;opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">EN</a></div>
     </nav>
+    <div class="lang-mobile" role="group" aria-label="Idioma" style="display:flex;border:1px solid rgba(245,244,240,0.4);font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;display:none;align-self:center"><a href="PROAPS.html" hreflang="pt-BR" lang="pt-BR" aria-current="page" style="padding:7px 10px;background:var(--campo-0);color:var(--campo-2);font-weight:600;text-decoration:none">PT</a><a href="en/PROAPS.html" hreflang="en" lang="en" aria-label="Read in English" style="padding:7px 10px;color:var(--campo-0);text-decoration:none;opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">EN</a></div>
     <button class="hamburger" onClick="{{ toggleNav }}" aria-label="Abrir menu de navegação" aria-expanded="{{ navOpen }}" aria-controls="mobile-nav" style="display:none;grid-column:12/span 1;justify-self:end;width:44px;height:44px;border:1px solid var(--campo-0);background:transparent;color:var(--campo-0);font-size:20px;line-height:1;align-items:center;justify-content:center;cursor:pointer;transition:background .18s ease,color .18s ease" style-hover="background:var(--campo-0);color:var(--campo-2)">{{ navIcon }}</button>
     <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
       <nav id="mobile-nav" aria-label="Navegação principal (móvel)" style="grid-column:1/-1;display:flex;flex-direction:column;padding:8px 0 4px;border-top:1px solid rgba(245,244,240,0.15);margin-top:16px;font-family:var(--ff-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.08em">
@@ -102,9 +109,9 @@
         Papel<b style="display:block;color:var(--campo-2);background:var(--c-atencao);width:fit-content;padding:2px 6px">UX Research e Visão de Produto</b>
       </div>
       <div style="grid-column:5/span 8">
-        <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--c-atencao);margin-bottom:16px">PROAPS, saúde mental na APS</div>
-        <h1 style="font-family:var(--ff-display);font-size:44px;line-height:0.92;letter-spacing:-0.02em;font-weight:900;margin:0 0 20px;text-transform:uppercase;overflow-wrap:anywhere">De <span style="color:var(--c-atencao)">one-fits-all</span> a três trilhas que cabem no SUS real.</h1>
-        <p style="font-size:17px;line-height:1.55;max-width:620px;margin:0;opacity:0.88">A qualificação em saúde mental para a APS era a mesma para ACS, enfermeiro e médico de família, ignorando que cada categoria tem escopo, tempo de contato e retaguarda completamente diferentes. Fiz o diagnóstico com as três categorias e redesenhei a capacitação considerando a equipe mínima que o SUS realmente tem em cada unidade.</p>
+        <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--c-atencao);margin-bottom:16px">PROAPS (Programa de Fortalecimento de Saúde Mental na Atenção Primária à Saúde)</div>
+        <h1 style="font-family:var(--ff-display);font-size:44px;line-height:0.92;letter-spacing:-0.02em;font-weight:900;margin:0 0 20px;text-transform:uppercase;overflow-wrap:anywhere">De <span style="color:var(--c-atencao)">one-fits-all</span> a três trilhas que cabem no SUS na rotina.</h1>
+        <p style="font-size:17px;line-height:1.55;max-width:620px;margin:0;opacity:0.88">A qualificação em saúde mental para a atenção primária em saúde (APS), a porta de entrada do Sistema Único de Saúde (SUS), era a mesma para agentes comunitários de saúde (ACS), enfermeiro e médico de família, ignorando que cada categoria tem escopo, tempo de contato e retaguarda completamente diferentes. Fiz o diagnóstico com as três categorias e redesenhei a capacitação considerando a equipe mínima que o SUS realmente tem em cada unidade.</p>
       </div>
     </div>
   </section>
@@ -129,7 +136,7 @@
       <div style="grid-column:9/span 4;border:1px solid var(--campo-2);padding:32px;background:var(--campo-0);display:flex;flex-direction:column;gap:16px">
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3)">§ Restrição real</div>
         <h2 style="font-family:var(--ff-display);font-size:26px;letter-spacing:-0.01em;text-transform:uppercase;margin:0">Equipe mínima do SUS</h2>
-        <p style="font-size:14px;line-height:1.6;color:var(--campo-2);margin:0">Sem contratar especialista novo. A trilha tinha que caber na equipe mínima que já existe em qualquer UBS, ACS, enfermeiro e médico de família, e não podia consumir os já escassos 15 minutos de consulta do médico. Pensada também para a escala do programa: qualificar todos os profissionais geraria uma customização enorme, inviável de replicar para outros territórios.</p>
+        <p style="font-size:14px;line-height:1.6;color:var(--campo-2);margin:0">Sem contratar especialista novo. A trilha tinha que caber na equipe mínima que já existe em qualquer unidade básica de saúde: agente comunitário, enfermeiro e médico de família, e não podia consumir os já escassos 15 minutos de consulta do médico. Pensada também para a escala do programa: qualificar todos os profissionais geraria uma customização enorme, inviável de replicar para outros territórios.</p>
       </div>
 
       <div style="grid-column:1/span 12;border:1px solid var(--campo-2);padding:32px;background:var(--campo-1);position:relative">
@@ -177,8 +184,8 @@
       <div style="grid-column:1/span 7;border:1px solid var(--campo-2);border-left:8px solid var(--c-acao);padding:32px;background:var(--campo-0)">
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Ação implantada</div>
         <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.05;margin-bottom:14px;text-transform:uppercase">Três trilhas, três formatos, um mesmo protocolo de base.</h2>
-        <p style="font-size:14px;line-height:1.6;margin:0">ACS: presencial de 4 dias com tutoria semanal por 3 meses, focado em rastreio em visita domiciliar. Enfermeiro: formato híbrido de 5 dias com tutoria pedagógica semanal por 5-6 meses, incluindo matriciamento e PTS. Médico de família: 2 encontros remotos síncronos, focados em estratificação de risco e manejo de psicofármacos com retaguarda da rede especializada.</p>
-        <p style="margin-top:14px;color:var(--campo-3);font-size:14px">Cada trilha usa protocolos de rastreio padronizados (PHQ-9, GAD-7) adaptados à profundidade de atuação de cada categoria.</p>
+        <p style="font-size:14px;line-height:1.6;margin:0">ACS: presencial de 4 dias com tutoria semanal por 3 meses, focado em rastreio em visita domiciliar. Enfermeiro: formato híbrido de 5 dias com tutoria pedagógica semanal por 5-6 meses, incluindo matriciamento e Plano Terapêutico Singular (PTS). Médico de família: 2 encontros remotos síncronos, focados em estratificação de risco e manejo de psicofármacos com retaguarda da rede especializada.</p>
+        <p style="margin-top:14px;color:var(--campo-3);font-size:14px">Cada trilha usa instrumentos de rastreio validados internacionalmente para depressão e ansiedade (Patient Health Questionnaire-9, PHQ-9, e Generalized Anxiety Disorder-7, GAD-7) adaptados à profundidade de atuação de cada categoria.</p>
       </div>
       <div class="gwrap" style="grid-column:8/span 5;display:grid;grid-template-columns:1fr 1fr;gap:var(--gutter)">
         <div style="border:1px solid var(--campo-2);padding:24px;background:var(--c-acao);color:var(--campo-2);display:flex;flex-direction:column;justify-content:space-between">
@@ -230,7 +237,7 @@
         </div>
         <div>
           <h2 style="font-family:var(--ff-display);font-size:20px;letter-spacing:-0.01em;text-transform:uppercase;margin:16px 0 8px 0">Por territorialização</h2>
-          <p style="font-size:14px;line-height:1.6;margin:0;color:var(--campo-3)">Selecionar profissionais por território, respeitando a lógica de cobertura da APS, em vez de escolher por interesse e conveniência individual.</p>
+          <p style="font-size:14px;line-height:1.6;margin:0;color:var(--campo-3)">Selecionar profissionais por território, respeitando a lógica de cobertura territorial da atenção primária, em vez de escolher por interesse e conveniência individual.</p>
         </div>
         <div>
           <h2 style="font-family:var(--ff-display);font-size:20px;letter-spacing:-0.01em;text-transform:uppercase;margin:16px 0 8px 0">Escalonando as unidades</h2>
@@ -241,7 +248,7 @@
       <div style="grid-column:1/span 6;border:1px solid var(--campo-2);padding:32px;background:var(--campo-1)">
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Metodologia</div>
         <h2 style="font-family:var(--ff-display);font-size:22px;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 12px">Acolhimento Interpessoal (AIP)</h2>
-        <p style="font-size:14px;line-height:1.6;margin:0">Adaptação da Terapia Interpessoal (TIP) para o escopo da APS, não forma terapeutas, mas capacita profissionais não especialistas a oferecer um acolhimento breve e resolutivo para sofrimento emocional leve a moderado. Qualificação presencial de 20h seguida de 3 a 4 meses de estágio com tutoria prática contínua.</p>
+        <p style="font-size:14px;line-height:1.6;margin:0">Adaptação da Terapia Interpessoal (TIP) para o escopo da atenção primária, não forma terapeutas, mas capacita profissionais não especialistas a oferecer um acolhimento breve e resolutivo para sofrimento emocional leve a moderado. Qualificação presencial de 20h seguida de 3 a 4 meses de estágio com tutoria prática contínua.</p>
       </div>
       <div style="grid-column:7/span 6;border:1px solid var(--campo-2);padding:32px;background:var(--campo-1)">
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Aprendizado</div>

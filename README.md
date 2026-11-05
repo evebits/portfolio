@@ -12,7 +12,9 @@ Site estático. Não tem build, não tem dependência de npm. Abrir `index.html`
     InSpireInRad.html             Discovery do agendamento de exames de imagem
     PessoasQueTransformam.html    Programa de melhoria de serviços públicos (PMSP)
     JogoSUS.html                  Jogo In.spire SUS
+    DesignSystemJuridico.html     Design system de software jurídico (processo seletivo)
     support.js                    runtime das páginas — não editar
+    en/                           versão em inglês de todas as páginas (mesmos nomes)
     images/                       imagens (ver images/LEIA-ME.txt)
     sitemap.xml, robots.txt       SEO
 

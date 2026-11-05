@@ -14,6 +14,9 @@
   <title>Evelyn Bitencourt, Design de Serviços em Saúde Pública</title>
   <meta name="description" content="Portfólio de Evelyn Bitencourt, especialista em design de serviços, com foco em pesquisa e design de serviços aplicados à saúde pública, educação e transformação governamental."></meta>
   <link rel="canonical" href="https://evelynsbitencourt.netlify.app/"></link>
+  <link rel="alternate" hreflang="pt-BR" href="https://evelynsbitencourt.netlify.app/"></link>
+  <link rel="alternate" hreflang="en" href="https://evelynsbitencourt.netlify.app/en/"></link>
+  <link rel="alternate" hreflang="x-default" href="https://evelynsbitencourt.netlify.app/"></link>
   <meta property="og:type" content="website"></meta>
   <meta property="og:title" content="Evelyn Bitencourt, Design de Serviços em Saúde Pública"></meta>
   <meta property="og:description" content="Pesquisa e design de serviços aplicados à saúde pública, educação e transformação governamental."></meta>
@@ -33,12 +36,14 @@
     a:hover{color:#F2672A}
     img{max-width:100%}
     .hamburger{display:none}
+    .lang-mobile{display:none}
     @media (max-width:991.98px){
       .site-nav{display:none !important}
       .hamburger{display:flex !important}
-      header{grid-template-columns:1fr 44px !important;gap:16px !important}
+      header{grid-template-columns:1fr auto 44px !important;gap:12px !important}
+      .lang-mobile{display:flex !important;grid-column:2 !important}
       header>a{grid-column:1 !important;font-size:17px !important}
-      header>.hamburger{grid-column:2 !important}
+      header>.hamburger{grid-column:3 !important}
       header>nav{grid-column:1/-1 !important}
       .gwrap,section[style*="repeat(12"],footer[style*="repeat(12"]{grid-template-columns:repeat(2,1fr) !important}
       .gwrap>*,section[style*="repeat(12"]>*,footer[style*="repeat(12"]>*{grid-column:span 1 !important}
@@ -82,7 +87,9 @@
       <a href="#sobre" style="color:var(--campo-0);opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">Sobre mim</a>
       <a href="#projetos" style="color:var(--campo-0);opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">Projetos</a>
       <a href="#contato" style="color:var(--campo-2);background:var(--c-atencao);padding:9px 18px;font-weight:600;opacity:1;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 4px 0 rgba(245,244,240,0.35)" style-active="transform:translateY(0);box-shadow:none">Contato</a>
+      <div class="lang-switch" role="group" aria-label="Idioma" style="display:flex;border:1px solid rgba(245,244,240,0.4);font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;"><a href="index.html" hreflang="pt-BR" lang="pt-BR" aria-current="page" style="padding:7px 10px;background:var(--campo-0);color:var(--campo-2);font-weight:600;text-decoration:none">PT</a><a href="en/index.html" hreflang="en" lang="en" aria-label="Read in English" style="padding:7px 10px;color:var(--campo-0);text-decoration:none;opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">EN</a></div>
     </nav>
+    <div class="lang-mobile" role="group" aria-label="Idioma" style="display:flex;border:1px solid rgba(245,244,240,0.4);font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;display:none;align-self:center"><a href="index.html" hreflang="pt-BR" lang="pt-BR" aria-current="page" style="padding:7px 10px;background:var(--campo-0);color:var(--campo-2);font-weight:600;text-decoration:none">PT</a><a href="en/index.html" hreflang="en" lang="en" aria-label="Read in English" style="padding:7px 10px;color:var(--campo-0);text-decoration:none;opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">EN</a></div>
     <button class="hamburger" onClick="{{ toggleNav }}" aria-label="Abrir menu de navegação" aria-expanded="{{ navOpen }}" aria-controls="mobile-nav" style="display:none;grid-column:12/span 1;justify-self:end;width:44px;height:44px;border:1px solid var(--campo-0);background:transparent;color:var(--campo-0);font-size:20px;line-height:1;align-items:center;justify-content:center;cursor:pointer;transition:background .18s ease,color .18s ease" style-hover="background:var(--campo-0);color:var(--campo-2)">{{ navIcon }}</button>
     <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
       <nav id="mobile-nav" aria-label="Navegação principal (móvel)" style="grid-column:1/-1;display:flex;flex-direction:column;padding:8px 0 4px;border-top:1px solid rgba(245,244,240,0.15);margin-top:16px;font-family:var(--ff-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.08em">
@@ -133,8 +140,8 @@
     <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
       <div style="grid-column:8/span 5;order:2">
         <h3 style="font-family:var(--ff-display);font-size:34px;line-height:1;letter-spacing:-0.02em;margin-bottom:20px;text-transform:uppercase">Design de serviços ponta a ponta, com foco em saúde pública.</h3>
-        <p style="font-size:16px;line-height:1.65;margin:0 0 14px">Sou <b style="font-weight:700">Evelyn Bitencourt</b>, mestre em Design pela USP, com oito anos aplicando UX Design e Service Blueprint a saúde pública, educação e transformação governamental, em passagens pela ImpulsoGov, InovaHC/HCFMUSP, o (011).lab e uma consultoria para a UNESCO. Trabalho perto de quem vive o problema, mapeando a Jornada do Usuário real por trás dos dados. Sou curiosa, direta e persistente, e não desisto de uma solução só porque o sistema é complicado.</p>
-        <p style="font-size:16px;line-height:1.65;margin:0"><b style="font-weight:700">Conquistas:</b> menção honrosa no Don Norman Award 2024 (In.cube); NPS 95 no mesmo programa; coordenação nacional da formação em saúde mental na APS do SUS, na ImpulsoGov. <b style="font-weight:700">Me destaco em:</b> escuta ativa, liderança de times multidisciplinares e comunicação, traduzindo achados complexos de User Experience em decisões simples.</p>
+        <p style="font-size:16px;line-height:1.65;margin:0 0 14px">Sou <b style="font-weight:700">Evelyn Bitencourt</b>, mestre em Design pela Universidade de São Paulo (USP), com oito anos aplicando UX Design e Service Blueprint a saúde pública, educação e transformação governamental, em passagens pela ImpulsoGov, InovaHC, o núcleo de inovação do Hospital das Clínicas da Faculdade de Medicina da USP (HCFMUSP), o (011).lab e <b style="font-weight:700">uma consultoria para a UNESCO</b>. Trabalho perto de quem vive o problema, mapeando a Jornada do Usuário real por trás dos dados. Sou curiosa, direta e persistente, e não desisto de uma solução só porque o sistema é complicado.</p>
+        <p style="font-size:16px;line-height:1.65;margin:0"><b style="font-weight:700">Conquistas:</b> finalista do Don Norman Design Award 2024 e menção honrosa no Congresso Internacional de Inovação Aberta (In.cube); NPS (Net Promoter Score) 94 no mesmo programa; coordenação nacional da formação em saúde mental na atenção primária em saúde (APS) do Sistema Único de Saúde (SUS), na ImpulsoGov. <b style="font-weight:700">Me destaco em:</b> escuta ativa, liderança de times multidisciplinares e comunicação, traduzindo achados complexos de User Experience em decisões simples.</p>
       </div>
       <div style="grid-column:1/span 6;order:1">
         <div style="border:1px solid var(--campo-2);aspect-ratio:4/5">
@@ -159,6 +166,20 @@
 
     <div ref="{{ projectsScrollRef }}" onScroll="{{ handleProjectsScroll }}" style="display:flex;gap:var(--gutter);overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:8px">
       <!-- PROAPS featured -->
+      <a href="DesignSystemJuridico.html" style="flex:0 0 340px;scroll-snap-align:start;border:1px solid var(--campo-2);background:var(--campo-0);display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .24s cubic-bezier(.2,.7,.2,1),box-shadow .24s ease,background .24s ease" style-hover="transform:translateY(-6px);box-shadow:10px 10px 0 var(--campo-2);background:var(--campo-1)" style-active="transform:translateY(-2px);box-shadow:4px 4px 0 var(--campo-2)">
+        <div style="height:170px;border-bottom:1px solid var(--campo-2)">
+          <img src="images/ds-juridico-capa.png" alt="Capa do design system" style="width:100%;height:100%;object-fit:cover;object-position:top left;display:block" />
+        </div>
+        <div style="padding:22px;display:flex;flex-direction:column;gap:10px;flex:1">
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-infra)">§ Processo seletivo · Design System</div>
+          <h5 style="font-family:var(--ff-display);font-size:22px;line-height:1;letter-spacing:-0.01em;text-transform:uppercase;margin:0">Design System Jurídico</h5>
+          <p style="font-size:13px;line-height:1.55;color:var(--campo-3);margin:0">Atividade prática de processo seletivo para uma legaltech: diagnóstico, design system e redesign incremental de um software jurídico, partindo de um teste de 3m28s para ver o que vence hoje.</p>
+          <div style="margin-top:auto;padding-top:14px;display:flex;justify-content:space-between;align-items:center">
+            <span style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3)">2026 · 4 dias</span>
+            <span style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;border:1px solid var(--campo-2);padding:8px 14px">Ver projeto →</span>
+          </div>
+        </div>
+      </a>
       <a href="PROAPS.html" style="flex:0 0 340px;scroll-snap-align:start;border:1px solid var(--campo-2);background:var(--campo-0);display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .24s cubic-bezier(.2,.7,.2,1),box-shadow .24s ease,background .24s ease" style-hover="transform:translateY(-6px);box-shadow:10px 10px 0 var(--campo-2);background:var(--campo-1)" style-active="transform:translateY(-2px);box-shadow:4px 4px 0 var(--campo-2)">
         <div style="height:170px;border-bottom:1px solid var(--campo-2)">
           <img src="images/proj-proaps.jpg" alt="PROAPS, foto de campo / equipe" style="width:100%;height:100%;object-fit:cover;display:block" />
@@ -181,7 +202,7 @@
         <div style="padding:22px;display:flex;flex-direction:column;gap:10px;flex:1">
           <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-acao)">§ Caso · UX Research</div>
           <h5 style="font-family:var(--ff-display);font-size:22px;line-height:1;letter-spacing:-0.01em;text-transform:uppercase;margin:0">Mapeamento Viva Vida</h5>
-          <p style="font-size:13px;line-height:1.55;color:var(--campo-3);margin:0">Pesquisa qualitativa sobre intervenção psicossocial via WhatsApp para idosos com sintomas depressivos, com IPq-HCFMUSP, King's College e FAUUSP.</p>
+          <p style="font-size:13px;line-height:1.55;color:var(--campo-3);margin:0">Pesquisa qualitativa sobre intervenção psicossocial via WhatsApp para idosos com sintomas depressivos, com o Instituto de Psiquiatria (IPq) do HCFMUSP, o King's College London e a Faculdade de Arquitetura e Urbanismo e de Design da USP (FAUUSP).</p>
           <div style="margin-top:auto;padding-top:14px;display:flex;justify-content:space-between;align-items:center">
             <span style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3)">2022-2024</span>
             <span style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;border:1px solid var(--campo-2);padding:8px 14px">Ver projeto →</span>
@@ -196,7 +217,7 @@
         <div style="padding:22px;display:flex;flex-direction:column;gap:10px;flex:1">
           <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-infra)">§ Caso · Design de Serviços End-to-End</div>
           <h5 style="font-family:var(--ff-display);font-size:22px;line-height:1;letter-spacing:-0.01em;text-transform:uppercase;margin:0">Programa In.cube</h5>
-          <p style="font-size:13px;line-height:1.55;color:var(--campo-3);margin:0">Redesenho do programa de aceleração de tecnologias em saúde do InovaHC com Biodesign. Finalista do Don Norman Design Award 2024, categoria Educação.</p>
+          <p style="font-size:13px;line-height:1.55;color:var(--campo-3);margin:0">Redesenho do programa de aceleração de tecnologias em saúde do InovaHC com Biodesign. Finalista do Don Norman Design Award 2024, categoria Educação, e menção honrosa no Congresso Internacional de Inovação Aberta.</p>
           <div style="margin-top:auto;padding-top:14px;display:flex;justify-content:space-between;align-items:center">
             <span style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3)">2021-2025</span>
             <span style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;border:1px solid var(--campo-2);padding:8px 14px">Ver projeto →</span>
@@ -226,7 +247,7 @@
         <div style="padding:22px;display:flex;flex-direction:column;gap:10px;flex:1">
           <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-inter)">§ Caso · UX Research</div>
           <h5 style="font-family:var(--ff-display);font-size:22px;line-height:1;letter-spacing:-0.01em;text-transform:uppercase;margin:0">Agendamento de Exames de Imagem</h5>
-          <p style="font-size:13px;line-height:1.55;color:var(--campo-3);margin:0">Discovery do serviço de agendamento de exames por imagem em hospital terciário do SUS, do mapeamento de jornadas ao ETP e roadmap de contratação.</p>
+          <p style="font-size:13px;line-height:1.55;color:var(--campo-3);margin:0">Discovery do serviço de agendamento de exames por imagem em hospital terciário do SUS, do mapeamento de jornadas ao Estudo Técnico Preliminar (ETP) e roadmap de contratação.</p>
           <div style="margin-top:auto;padding-top:14px;display:flex;justify-content:space-between;align-items:center">
             <span style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3)">2025 · 4 meses</span>
             <span style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;border:1px solid var(--campo-2);padding:8px 14px">Ver projeto →</span>
@@ -241,7 +262,7 @@
         <div style="padding:22px;display:flex;flex-direction:column;gap:10px;flex:1">
           <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-atencao)">§ Caso · Design de Serviços End-to-End</div>
           <h5 style="font-family:var(--ff-display);font-size:22px;line-height:1;letter-spacing:-0.01em;text-transform:uppercase;margin:0">Pessoas que Transformam</h5>
-          <p style="font-size:13px;line-height:1.55;color:var(--campo-3);margin:0">Desenho de programa de melhoria de serviços públicos para a Prefeitura de São Paulo, com diagnóstico, jornada modular e árvore de decisão. (011).lab · SMIT/PMSP · UNESCO.</p>
+          <p style="font-size:13px;line-height:1.55;color:var(--campo-3);margin:0">Desenho de programa de melhoria de serviços públicos para a Prefeitura de São Paulo, com diagnóstico, jornada modular e árvore de decisão. (011).lab · Secretaria Municipal de Inovação e Tecnologia (SMIT) · UNESCO.</p>
           <div style="margin-top:auto;padding-top:14px;display:flex;justify-content:space-between;align-items:center">
             <span style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3)">2023</span>
             <span style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;border:1px solid var(--campo-2);padding:8px 14px">Ver projeto →</span>
@@ -257,7 +278,7 @@
           <div style="padding:22px;display:flex;flex-direction:column;gap:10px;flex:1">
             <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-acao)">§ Caso · Prototipação</div>
             <h5 style="font-family:var(--ff-display);font-size:22px;line-height:1;letter-spacing:-0.01em;text-transform:uppercase;margin:0">Jogo In.spire SUS</h5>
-            <p style="font-size:13px;line-height:1.55;color:var(--campo-3);margin:0">Jogo cooperativo de tabuleiro sobre gestão intermunicipal do SUS, mecânica, narrativa e prototipagem de +200 componentes. Selecionado, DOFF 2024 (maior feira de jogos de tabuleiro da América Latina).</p>
+            <p style="font-size:13px;line-height:1.55;color:var(--campo-3);margin:0">Jogo cooperativo de tabuleiro sobre gestão intermunicipal do SUS, mecânica, narrativa e prototipagem de +200 componentes. Selecionado, DOFF 2024 (Diversão Offline, maior feira de jogos de tabuleiro da América Latina).</p>
             <div style="margin-top:auto;padding-top:14px;display:flex;justify-content:space-between;align-items:center">
               <span style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3)">2024</span>
               <span style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;border:1px solid var(--campo-2);padding:8px 14px">Ver projeto →</span>
@@ -281,7 +302,7 @@
         </div>
       </div>
       <div style="grid-column:1/span 12;margin-top:56px;padding-top:20px;border-top:1px solid rgba(245,244,240,0.15);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--campo-4)">
-        <span>Site feito por mim, identidade visual inclusive, com apoio do Claude para vibe codar ;)</span>
+        <span>Design, identidade visual e desenvolvimento deste site por Evelyn Bitencourt.</span>
         <span>2026</span>
       </div>
     </div>
