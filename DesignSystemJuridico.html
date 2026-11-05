@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"></link>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&family=Barlow+Semi+Condensed:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"></link>
+  <title>Design System Jurídico, Diagnóstico e Redesign | Evelyn Bitencourt</title>
+  <meta name="description" content="Atividade prática de processo seletivo para uma legaltech: diagnóstico, design system e redesign incremental de um software jurídico, de 3m28s para ver o que vence hoje a uma Área de Trabalho por urgência."></meta>
+  <link rel="canonical" href="https://evelynsbitencourt.netlify.app/DesignSystemJuridico.html"></link>
+  <link rel="alternate" hreflang="pt-BR" href="https://evelynsbitencourt.netlify.app/DesignSystemJuridico.html"></link>
+  <link rel="alternate" hreflang="en" href="https://evelynsbitencourt.netlify.app/en/DesignSystemJuridico.html"></link>
+  <link rel="alternate" hreflang="x-default" href="https://evelynsbitencourt.netlify.app/DesignSystemJuridico.html"></link>
+  <meta property="og:type" content="article"></meta>
+  <meta property="og:title" content="Design System Jurídico, Diagnóstico e Redesign"></meta>
+  <meta property="og:description" content="Atividade prática de processo seletivo para uma legaltech: diagnóstico, design system e redesign incremental de um software jurídico, de 3m28s para ver o que vence hoje a uma Área de Trabalho por urgência."></meta>
+  <meta property="og:url" content="https://evelynsbitencourt.netlify.app/DesignSystemJuridico.html"></meta>
+  <meta property="og:image" content="https://evelynsbitencourt.netlify.app/images/ds-juridico-depois.png"></meta>
+  <meta name="twitter:card" content="summary_large_image"></meta>
+  <meta name="twitter:title" content="Design System Jurídico, Diagnóstico e Redesign"></meta>
+  <meta name="twitter:description" content="Atividade prática de processo seletivo para uma legaltech: diagnóstico, design system e redesign incremental de um software jurídico, de 3m28s para ver o que vence hoje a uma Área de Trabalho por urgência."></meta>
+  <meta name="twitter:image" content="https://evelynsbitencourt.netlify.app/images/ds-juridico-depois.png"></meta>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Design System Jurídico","author":{"@type":"Person","name":"Evelyn Bitencourt"},"about":"Design System Jurídico, Diagnóstico e Redesign","url":"https://evelynsbitencourt.netlify.app/DesignSystemJuridico.html","inLanguage":"pt-BR"}</script>
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    [id]{scroll-margin-top:104px}
+    body{margin:0;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:#E11D4F}
+    a:hover{color:#F2672A}
+    img{max-width:100%}
+    .hamburger{display:none}
+    .lang-mobile{display:none}
+    @media (max-width:991.98px){
+      .site-nav{display:none !important}
+      .hamburger{display:flex !important}
+      header{grid-template-columns:1fr auto 44px !important;gap:12px !important}
+      .lang-mobile{display:flex !important;grid-column:2 !important}
+      header>a{grid-column:1 !important;font-size:17px !important}
+      header>.hamburger{grid-column:3 !important}
+      header>nav{grid-column:1/-1 !important}
+      .gwrap,section[style*="repeat(12"],footer[style*="repeat(12"]{grid-template-columns:repeat(2,1fr) !important}
+      .gwrap>*,section[style*="repeat(12"]>*,footer[style*="repeat(12"]>*{grid-column:span 1 !important}
+      .gwrap>[style*="span 12"],section[style*="repeat(12"]>[style*="span 12"],footer[style*="repeat(12"]>[style*="span 12"]{grid-column:1/-1 !important}
+      .gwrap .gwrap{grid-column:1/-1 !important;grid-template-columns:1fr !important}
+      [style*="absolute"]{grid-column:auto !important}
+      .quote-grid{grid-template-columns:1fr !important;gap:16px !important}
+      .quote-grid>*:last-child{text-align:left !important}
+      .hero-box{padding:36px !important}
+      [style*="340px"]{flex:0 0 300px !important}
+    }
+    @media (max-width:768px){
+      .gwrap,section[style*="repeat(12"],footer[style*="repeat(12"]{grid-template-columns:1fr !important}
+      .gwrap>*,section[style*="repeat(12"]>*,footer[style*="repeat(12"]>*{grid-column:1/-1 !important}
+      [style*="absolute"]{grid-column:auto !important}
+      section,header,footer{padding-left:28px !important;padding-right:28px !important}
+      h1{font-size:34px !important}
+      [style*="340px"]{flex:0 0 82vw !important}
+    }
+    @media (max-width:575.98px){
+      section,header,footer{padding-left:16px !important;padding-right:16px !important}
+      a[href*="teses.usp.br"]{grid-template-columns:1fr !important;gap:14px !important;padding:24px !important}
+      h1{font-size:28px !important}
+      .hero-box{padding:24px !important}
+      .quote-grid{padding:24px !important}
+    }
+    a:focus-visible, button:focus-visible{outline:3px solid #E11D4F;outline-offset:2px}
+    .skip-link{position:absolute;left:-9999px;top:0;background:#141414;color:#F5F4F0;padding:12px 20px;z-index:100;font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:0.08em}
+    .skip-link:focus{left:16px;top:16px}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:0.01ms !important;transition-duration:0.01ms !important;transition-delay:0 !important}}
+  </style>
+</helmet>
+<a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+<div style="--ff-body:'Mulish',system-ui,sans-serif;--ff-display:'Barlow Semi Condensed',Impact,sans-serif;--ff-mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--campo-0:#F5F4F0;--campo-1:#ECEAE3;--campo-2:#141414;--campo-3:#5A5A5A;--campo-4:#B5B2A8;--c-infra:#352A87;--c-inter:#6526A5;--c-humano:#A61F8C;--c-decisao:#E11D4F;--c-acao:#F2672A;--c-atencao:#E9BD3A;--gutter:24px;--margin:64px;font-family:var(--ff-body);color:var(--campo-2);background:var(--campo-0);max-width:none;margin:0 auto;position:relative;line-height:1.5;font-size:16px;">
+
+  <header style="position:sticky;top:0;z-index:20;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);padding:22px var(--margin);align-items:center;border-bottom:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0)" style-before="content:'';position:absolute;left:0;top:0;bottom:0;width:8px;background:linear-gradient(180deg,var(--c-infra) 0 16.6%,var(--c-inter) 16.6% 33.3%,var(--c-humano) 33.3% 50%,var(--c-decisao) 50% 66.6%,var(--c-acao) 66.6% 83.3%,var(--c-atencao) 83.3% 100%)">
+    <a href="index.html" style="grid-column:1/span 5;font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:0.04em;font-weight:800;white-space:nowrap;color:var(--campo-0);text-decoration:none;transition:color .2s ease" style-hover="color:var(--c-atencao)">EVELYN BITENCOURT</a>
+    <nav class="site-nav" aria-label="Navegação principal" style="grid-column:6/span 7;display:flex;gap:32px;justify-content:flex-end;align-items:center;font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em">
+      <a href="index.html#projetos" style="color:var(--campo-0);opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">← Todos os projetos</a>
+      <a href="index.html#contato" style="color:var(--campo-2);background:var(--c-atencao);padding:9px 18px;font-weight:600;opacity:1;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 4px 0 rgba(245,244,240,0.35)" style-active="transform:translateY(0);box-shadow:none">Contato</a>
+      <div class="lang-switch" role="group" aria-label="Idioma" style="display:flex;border:1px solid rgba(245,244,240,0.4);font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;"><a href="DesignSystemJuridico.html" hreflang="pt-BR" lang="pt-BR" aria-current="page" style="padding:7px 10px;background:var(--campo-0);color:var(--campo-2);font-weight:600;text-decoration:none">PT</a><a href="en/DesignSystemJuridico.html" hreflang="en" lang="en" aria-label="Read in English" style="padding:7px 10px;color:var(--campo-0);text-decoration:none;opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">EN</a></div>
+    </nav>
+    <div class="lang-mobile" role="group" aria-label="Idioma" style="display:flex;border:1px solid rgba(245,244,240,0.4);font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;display:none;align-self:center"><a href="DesignSystemJuridico.html" hreflang="pt-BR" lang="pt-BR" aria-current="page" style="padding:7px 10px;background:var(--campo-0);color:var(--campo-2);font-weight:600;text-decoration:none">PT</a><a href="en/DesignSystemJuridico.html" hreflang="en" lang="en" aria-label="Read in English" style="padding:7px 10px;color:var(--campo-0);text-decoration:none;opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">EN</a></div>
+    <button class="hamburger" onClick="{{ toggleNav }}" aria-label="Abrir menu de navegação" aria-expanded="{{ navOpen }}" aria-controls="mobile-nav" style="display:none;grid-column:12/span 1;justify-self:end;width:44px;height:44px;border:1px solid var(--campo-0);background:transparent;color:var(--campo-0);font-size:20px;line-height:1;align-items:center;justify-content:center;cursor:pointer;transition:background .18s ease,color .18s ease" style-hover="background:var(--campo-0);color:var(--campo-2)">{{ navIcon }}</button>
+    <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
+      <nav id="mobile-nav" aria-label="Navegação principal (móvel)" style="grid-column:1/-1;display:flex;flex-direction:column;padding:8px 0 4px;border-top:1px solid rgba(245,244,240,0.15);margin-top:16px;font-family:var(--ff-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.08em">
+        <a href="index.html#projetos" style="color:var(--campo-0);padding:14px 0;border-bottom:1px solid rgba(245,244,240,0.1)">← Todos os projetos</a>
+        <a href="index.html#contato" style="color:var(--campo-2);background:var(--c-atencao);padding:12px 18px;font-weight:600;width:fit-content;margin-top:14px">Contato</a>
+      </nav>
+    </sc-if>
+  </header>
+
+  <section id="main-content" style="position:relative;padding:80px var(--margin) 56px;border-bottom:1px solid var(--campo-2);display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+    <div class="hero-box gwrap" style="grid-column:1/span 12;border:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0);padding:48px;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);position:relative;overflow:hidden">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:10px;background:var(--c-infra)"></div>
+      <div style="grid-column:1/span 3;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;line-height:2;color:var(--campo-4)">
+        Instituição<b style="display:block;color:var(--campo-0);font-weight:500">Processo seletivo · legaltech</b>
+        Período<b style="display:block;color:var(--campo-0);font-weight:500">2026 · 4 dias</b>
+        Escala<b style="display:block;color:var(--campo-0);font-weight:500">20 telas inventariadas · 5 problemas · 13 seções de DS</b>
+        Função<b style="display:block;color:var(--campo-0);font-weight:500">Diagnóstico, design system e redesign incremental</b>
+        Papel<b style="display:block;color:var(--campo-0);background:var(--c-infra);width:fit-content;padding:2px 6px">Design System</b>
+      </div>
+      <div style="grid-column:5/span 8">
+        <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--c-atencao);margin-bottom:16px">Processo seletivo · UX Designer Especialista</div>
+        <h1 style="font-family:var(--ff-display);font-size:44px;line-height:0.92;letter-spacing:-0.02em;font-weight:900;margin:0 0 20px;text-transform:uppercase;overflow-wrap:anywhere"><span style="color:var(--c-atencao)">3m28s</span> para ver o que vence hoje. A meta é 30 segundos.</h1>
+        <p style="font-size:17px;line-height:1.55;max-width:640px;margin:0;opacity:0.88">Diagnóstico, design system e redesign incremental de um software de gestão para escritórios de advocacia. Tudo amarrado a um único problema: o advogado não pode perder prazo, e hoje a interface não deixa ele ver isso.</p>
+        <p style="margin:20px 0 0;font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;line-height:1.6;border:1px solid rgba(245,244,240,0.35);padding:10px 14px;width:fit-content;max-width:640px;color:var(--campo-0)">Atividade prática de processo seletivo, feita em 4 dias com conta trial. Não é trabalho contratado pela empresa nem foi implementado no produto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <figure style="grid-column:1/span 6;margin:0;border:1px solid var(--campo-2);background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;padding:10px 16px;border-bottom:1px solid var(--campo-2);display:flex;gap:12px;align-items:center"><span style="background:var(--c-decisao);color:var(--campo-0);padding:3px 8px">Antes</span><span style="color:var(--campo-3)">Área de Trabalho atual · lista só de tarefas, atrasos em gráfico, prazos e audiências fora da vista</span></div>
+        <img src="images/ds-juridico-antes.png" alt="Área de Trabalho atual do produto, com lista de tarefas e gráfico de atividades" style="width:100%;height:auto;display:block" />
+      </figure>
+      <figure style="grid-column:7/span 6;margin:0;border:1px solid var(--campo-2);background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;padding:10px 16px;border-bottom:1px solid var(--campo-2);display:flex;gap:12px;align-items:center"><span style="background:var(--c-humano);color:var(--campo-0);padding:3px 8px">Depois</span><span style="color:var(--campo-3)">Proposta · atrasadas, hoje e amanhã numa lista única, com contagem ao lado do título</span></div>
+        <img src="images/ds-juridico-depois.png" alt="Área de Trabalho redesenhada, com atividades agrupadas por urgência" style="width:100%;height:auto;display:block" />
+      </figure>
+      <div style="grid-column:1/span 7">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Problema</div>
+        <h2 style="font-family:var(--ff-display);font-size:32px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Três telas, três contagens de atraso.</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;">33% dos votos no portal de sugestões pedem a mesma coisa: não perder prazos. Testei essa tarefa numa conta trial. Levei 3m28s para descobrir o que vencia no dia, e a própria interface mostrava 1, 5 e 13 atividades atrasadas, dependendo da tela. Para quem trabalha com prazo processual, uma contagem inconsistente é pior que nenhuma.</p>
+      </div>
+      <div style="grid-column:9/span 4;border:1px solid var(--campo-2);border-left:8px solid var(--c-infra);padding:32px;background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Meu papel</div>
+        <h2 style="font-family:var(--ff-display);font-size:23px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Atividade prática, do diagnóstico ao componente</h2>
+        <p style="font-size:14px;line-height:1.6;margin:0">Case individual do processo seletivo para UX Designer Especialista em uma legaltech. Fiz o diagnóstico, os princípios, a arquitetura e a governança do design system, o plano de migração e os componentes, sem acesso a usuários, ao time ou ao código.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 5">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Diagnóstico</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Criar tarefa funciona. Criar prazo, não.</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;">Cruzei três fontes: os votos do portal, um roteiro de tarefas testado no trial e avaliação heurística de 20 telas inventariadas. A tabela mostra o achado central: o fluxo que mais importa para o advogado é o que mais falha. Um prazo salvo como tarefa fica sem alerta.</p>
+      </div>
+      <div style="grid-column:7/span 6;border:1px solid var(--campo-2);background:var(--campo-0)">
+        <div style="display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:12px;padding:12px 16px;border-bottom:1px solid var(--campo-4);font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3)"><span>Tarefa</span><span>Resultado</span><span>Tempo</span><span>Cliques</span></div>
+        <div style="display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:12px;padding:12px 16px;border-bottom:1px solid var(--campo-4);font-size:14px"><span>Criar tarefa</span><span><span style="color:var(--c-humano);font-weight:700">Conseguiu</span></span><span>1m39s</span><span>2</span></div>
+        <div style="display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:12px;padding:12px 16px;border-bottom:1px solid var(--campo-4);font-size:14px"><span>Criar audiência</span><span><b style="color:var(--c-decisao)">Falhou</b></span><span>2m13s</span><span>5</span></div>
+        <div style="display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:12px;padding:12px 16px;border-bottom:1px solid var(--campo-4);font-size:14px"><span><b>Criar prazo</b></span><span><b style="color:var(--c-decisao)">Falhou</b></span><span>2m51s</span><span>8</span></div>
+        <div style="display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:12px;padding:12px 16px;border-bottom:1px solid var(--campo-4);font-size:14px"><span>Prazo a partir da publicação</span><span><span style="color:var(--c-humano);font-weight:700">Conseguiu</span></span><span>2m48s</span><span>3</span></div>
+        <p style="font-size:13px;line-height:1.55;margin:0;padding:14px 16px;color:var(--campo-3)">O teste completo e as histórias de usuário estão na planilha de análise do case.</p>
+      </div>
+      <div class="gwrap" style="grid-column:1/span 12;display:grid;grid-template-columns:repeat(5,1fr);gap:var(--gutter)">
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-decisao);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">1 · Severidade 4/4</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">A Área de Trabalho não mostra o dia</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">A audiência do dia fica fora da vista.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-decisao);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">2 · Severidade 4/4</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Prazo e audiência fora do modelo mental</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Prazo salvo como tarefa fica sem alerta.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-decisao);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">3 · Severidade 4/4</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Contagem de atrasos inconsistente</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Agenda e Área de Trabalho usam regras diferentes.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-acao);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">4 · Severidade 3/4</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Valores padrão inválidos</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Hora 00:00 recusada e prazo sem alerta.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-atencao);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">5 · Severidade 2/4</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Atividade exibida de formas diferentes</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Tipo e processo só aparecem na Agenda.</p>
+        </div>
+      </div>
+      <p style="grid-column:1/span 12;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin:0">Severidade de 1 a 4, combinando frequência e impacto sobre o risco de perder prazo.</p>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 12">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Princípios</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Cinco regras de decisão, cada uma amarrada a um problema</h2>
+      </div>
+      <div class="gwrap" style="grid-column:1/span 12;display:grid;grid-template-columns:repeat(5,1fr);gap:var(--gutter)">
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-infra);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Problema 1</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">1. Mostrar o dia em uma tela</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Prazos, audiências, tarefas e eventos numa lista, por urgência.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-infra);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Problema 3</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">2. Manter atrasos visíveis</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">O vencido fica na tela até ser resolvido, com cor, ícone e texto.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-infra);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Problemas 2 e 4</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">3. Usar os termos do escritório</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Nomes e valores padrão de quem advoga.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-infra);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Problema 5</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">4. Padronizar a atividade</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">A mesma linha em todos os módulos.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-infra);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Todos</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">5. Mudar aos poucos, com uma exceção</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Sem quebrar o que o usuário conhece. A exceção é a cor do atraso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 6">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Design system · arquitetura</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Começar pelos tokens, porque entram no legado sem mexer em template</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;">O produto roda em AngularJS. Variáveis de CSS são a única mudança que atinge o produto inteiro de uma vez, sem reescrever telas. Por isso o sistema foi desenhado em quatro camadas, de baixo para cima.</p>
+        <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px">
+          <div style="display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;font-size:14px;line-height:1.5"><span style="font-family:var(--ff-display);font-weight:900;font-size:22px;color:var(--c-infra)">1</span><span><b>Fundamentos.</b> Cor, tipografia (Nunito Sans, já usada no produto), espaço em escala de 4 px, forma e ícones.</span></div>
+          <div style="display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;font-size:14px;line-height:1.5"><span style="font-family:var(--ff-display);font-weight:900;font-size:22px;color:var(--c-infra)">2</span><span><b>Tokens em três níveis.</b> Primitivo guarda o valor, semântico guarda a intenção, componente liga a intenção à peça.</span></div>
+          <div style="display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;font-size:14px;line-height:1.5"><span style="font-family:var(--ff-display);font-weight:900;font-size:22px;color:var(--c-infra)">3</span><span><b>Componentes.</b> Button, Input, Badge e Toast, depois ActivityItem, WidgetCard e Modal.</span></div>
+          <div style="display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;font-size:14px;line-height:1.5"><span style="font-family:var(--ff-display);font-weight:900;font-size:22px;color:var(--c-infra)">4</span><span><b>Padrões.</b> Criar atividade, listas com filtro e painel.</span></div>
+        </div>
+      </div>
+      <figure style="grid-column:7/span 6;margin:0;border:1px solid var(--campo-2);background:var(--campo-0)">
+        <img src="images/ds-juridico-tokens.png" alt="Página de tokens do design system, com os três níveis e a tabela de semânticos" style="width:100%;height:auto;display:block" />
+        <figcaption style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);padding:12px 16px;border-top:1px solid var(--campo-2)">Tokens · fonte única em tokens.json, exportada para Figma e CSS</figcaption>
+      </figure>
+      <div style="grid-column:1/span 12;border:1px solid var(--campo-2);border-left:8px solid var(--c-decisao);padding:28px 32px;background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Primeiro efeito visível</div>
+        <p style="font-family:var(--ff-display);font-size:26px;line-height:1.1;text-transform:uppercase;font-weight:800;margin:0">Três tons de vermelho de perigo viram um token: feedback-danger.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 7">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Governança</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Um componente só entra no sistema se dois squads usarem</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;">Qualquer designer propõe; a triagem é semanal. Se dois ou mais squads usam, vira componente do sistema. Se não, fica local por um trimestre. Decidem juntos a especialista de design, o engenheiro de front e o tech lead, com desempate por área: engenharia na viabilidade, design no visual.</p>
+        <p style="font-size:14px;line-height:1.6;margin:14px 0 0;color:var(--campo-3)">Figma e código compartilham o mesmo status (rascunho, beta, estável, descontinuado). Um componente só é "pronto" com Figma, código e documentação.</p>
+      </div>
+      <figure style="grid-column:8/span 5;margin:0;border:1px solid var(--campo-2);background:var(--campo-0)">
+        <img src="images/ds-juridico-capa.png" alt="Capa do design system com as 13 seções da documentação" style="width:100%;height:auto;display:block" />
+        <figcaption style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);padding:12px 16px;border-top:1px solid var(--campo-2)">Design system v0.3 beta · 13 seções, WCAG 2.1 AA (Diretrizes de Acessibilidade para Conteúdo Web)</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 12">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Plano de migração</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Quatro fases, do menor para o maior risco</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;max-width:860px;margin-bottom:8px">Critério de prioridade: frequência de uso × problema de consistência ou usabilidade ÷ esforço. Telas novas e antigas convivem durante a migração: troca-se por componente, e mudança estrutural entra inteira, com feature flag.</p>
+      </div>
+      <div class="gwrap" style="grid-column:1/span 12;display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gutter)">
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--campo-3);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Fase 0</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Tokens</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Em todo o produto. Prepara a cor do atraso.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-infra);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Fase 1</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Componentes básicos</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Button, campos, Modal, Toast e Badge. Resolve o problema 4.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-humano);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Fase 2</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Fluxos centrais</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Criar atividade e Área de Trabalho, com ActivityItem e WidgetCard. Resolve os problemas 1, 2, 3 e 5.</p>
+        </div>
+        <div style="border:1px solid var(--campo-2);border-top:8px solid var(--c-acao);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--campo-3)">Fase 3</div>
+          <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;line-height:1.05;margin:0">Restante</h3>
+          <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Cauda longa e desligamento do legado.</p>
+        </div>
+      </div>
+      <figure style="grid-column:1/span 12;margin:0;border:1px solid var(--campo-2);background:var(--campo-0)">
+        <img src="images/ds-juridico-activityitem.png" alt="ActivityItem em oito estados: padrão, hover, foco, atrasada, concluída, carregando, vazio e erro" style="width:100%;height:auto;display:block" />
+        <figcaption style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);padding:12px 16px;border-top:1px solid var(--campo-2)">ActivityItem · uma linha para qualquer atividade, em todo módulo</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 6">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Decisão difícil</div>
+        <h2 style="font-family:var(--ff-display);font-size:32px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">O prazo deixa de ser vermelho.</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;">Hoje o tipo Prazo usa o mesmo vermelho das datas vencidas. Na mesma tela, um prazo para daqui a três semanas e uma tarefa vencida ficam com a mesma cor. Considerei três saídas:</p>
+        <div style="margin-top:18px;display:flex;flex-direction:column;gap:10px">
+          <div style="display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:14px;line-height:1.5;padding:10px 12px;"><b style="font-family:var(--ff-mono)">A</b><span><b>Manter o prazo vermelho</b> e marcar atraso só com ícone e texto. Respeita o hábito, mas a cor segue com dois sentidos.</span></div>
+          <div style="display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:14px;line-height:1.5;padding:10px 12px;background:var(--campo-1);border:1px solid var(--campo-2)"><b style="font-family:var(--ff-mono)">B</b><span><b>Prazo em vinho, vermelho só para atraso.</b> Escolhida. Cada cor tem um significado, e o tipo continua escrito no Badge.</span></div>
+          <div style="display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:14px;line-height:1.5;padding:10px 12px;"><b style="font-family:var(--ff-mono)">C</b><span><b>Quatro cores por urgência</b>, como sugerido no portal. Choca com as cores de tipo e polui a lista.</span></div>
+        </div>
+      </div>
+      <figure style="grid-column:7/span 6;margin:0;border:1px solid var(--campo-2);background:var(--campo-0)">
+        <img src="images/ds-juridico-decisao.png" alt="Antes e depois: o vermelho com dois sentidos e o vermelho só para atraso" style="width:100%;height:auto;display:block" />
+        <figcaption style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);padding:12px 16px;border-top:1px solid var(--campo-2)">Antes e depois · uma cor, um sentido</figcaption>
+      </figure>
+      <div style="grid-column:1/span 12;border:1px solid var(--campo-2);border-left:8px solid var(--c-atencao);padding:32px;background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ A exceção</div>
+        <h2 style="font-family:var(--ff-display);font-size:24px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">A única mudança que vai contra "mudar aos poucos"</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;max-width:960px">Uma cor com dois sentidos durante a migração é pior que uma troca brusca: numa tela o vermelho seria prazo, na outra seria atraso, e o advogado voltaria a não saber o que venceu. Por isso a troca entra na Fase 0, pelo token activity-prazo, em Agenda, Kanban e modais no mesmo release. O custo é quebrar o hábito de ver prazo em vermelho. A mitigação é um teste de primeiro clique antes do release: "quais itens estão atrasados?".</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 12">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Como saber se deu certo</div>
+        <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">As metas saem do próprio teste</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;max-width:860px;margin-bottom:8px">O case não tem resultado medido: é uma proposta. As métricas de usuário partem do que o teste no trial mostrou, para que o antes e o depois sejam comparáveis.</p>
+      </div>
+      <div class="gwrap" style="grid-column:1/span 12;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gutter)">
+        <div style="border:1px solid var(--campo-2);padding:24px;background:var(--c-infra);color:var(--campo-0);display:flex;flex-direction:column;justify-content:space-between;min-height:150px">
+          <div style="font-family:var(--ff-display);font-size:44px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">3m28s → 30s</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;opacity:0.82">Tempo para ver o que vence hoje</div>
+        </div>
+        <div style="border:1px solid var(--campo-2);padding:24px;background:var(--campo-0);color:var(--campo-2);display:flex;flex-direction:column;justify-content:space-between;min-height:150px">
+          <div style="font-family:var(--ff-display);font-size:44px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">3 → 1</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;opacity:0.82">Contagens de atraso diferentes no produto</div>
+        </div>
+        <div style="border:1px solid var(--campo-2);padding:24px;background:var(--campo-0);color:var(--campo-2);display:flex;flex-direction:column;justify-content:space-between;min-height:150px">
+          <div style="font-family:var(--ff-display);font-size:44px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">0 → 1</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;opacity:0.82">Tentativas de criar prazo bem-sucedidas no teste</div>
+        </div>
+      </div>
+      <div style="grid-column:1/span 12;border:1px solid var(--campo-2);background:var(--campo-1);padding:28px 32px">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Hipóteses a validar antes do redesign</div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+          <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;font-size:14px;line-height:1.5;padding-bottom:10px;border-bottom:1px solid var(--campo-4)"><span>A Área de Trabalho não basta para ver o dia</span><span style="color:var(--campo-3)">Analytics de navegação e entrevistas</span></li>
+          <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;font-size:14px;line-height:1.5;padding-bottom:10px;border-bottom:1px solid var(--campo-4)"><span>Prazos são salvos com o tipo errado</span><span style="color:var(--campo-3)">Títulos das tarefas e tree test</span></li>
+          <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;font-size:14px;line-height:1.5;padding-bottom:10px;border-bottom:1px solid var(--campo-4)"><span>As contagens de atraso usam regras diferentes</span><span style="color:var(--campo-3)">Engenharia e chamados do suporte</span></li>
+          <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;font-size:14px;line-height:1.5;padding-bottom:10px;border-bottom:1px solid var(--campo-4)"><span>Os padrões dos formulários geram erro</span><span style="color:var(--campo-3)">Erros de validação por campo</span></li>
+          <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;font-size:14px;line-height:1.5;padding-bottom:10px;border-bottom:1px solid var(--campo-4)"><span>Falta componente compartilhado entre squads</span><span style="color:var(--campo-3)">Código, Figma e os 4 designers</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;padding:56px var(--margin) 80px;border-bottom:1px solid var(--campo-2)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
+      <div style="grid-column:1/span 7">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Uso de IA</div>
+        <h2 style="font-family:var(--ff-display);font-size:26px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">A IA acelerou o inventário e a exploração. As decisões foram minhas.</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0;">Registrei seis usos de IA ao longo do case. Em cinco, ajustei o resultado: refiz um cronograma que inventava tarefas fora do escopo, foquei o roteiro de teste nas tarefas de prazo e troquei o vermelho da paleta para não confundir prazo e atraso. O inventário de componentes das 20 telas foi o único usado sem ajuste. Escolher o foco, interpretar o teste e decidir o vermelho não passaram pela ferramenta.</p>
+      </div>
+      <div style="grid-column:9/span 4;border:1px solid var(--campo-2);padding:28px;background:var(--campo-0)">
+        <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Limitações</div>
+        <p style="font-size:14px;line-height:1.6;margin:0">Avaliação individual numa conta trial; votos só de quem usa o portal; sem acesso à governança atual do time. O modelo de governança é ponto de partida, a ajustar ao processo existente e aos quatro designers do time.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:88px var(--margin);background:var(--campo-2);color:var(--campo-0);display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);position:relative;overflow:hidden" style-before="content:'';position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--c-infra) 0 16.6%,var(--c-inter) 16.6% 33.3%,var(--c-humano) 33.3% 50%,var(--c-decisao) 50% 66.6%,var(--c-acao) 66.6% 83.3%,var(--c-atencao) 83.3% 100%)">
+    <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);grid-column:1/span 12">
+      <div style="grid-column:1/span 7">
+        <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-atencao);margin-bottom:18px">Contato</div>
+        <h2 style="font-family:var(--ff-display);font-size:44px;line-height:0.95;letter-spacing:-0.03em;font-weight:900;margin:0 0 24px;text-transform:uppercase">Vamos ver onde o seu serviço <span style="color:var(--c-acao)">fricciona</span>.</h2>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:17px">
+          <a href="mailto:evelyn.bitencourt@gmail.com" style="color:var(--campo-0);border-bottom:1px solid rgba(245,244,240,0.25);width:fit-content;padding-bottom:2px;transition:color .18s ease,border-color .18s ease,padding-bottom .18s ease" style-hover="color:var(--c-atencao);border-color:var(--c-atencao);padding-bottom:5px">evelyn.bitencourt@gmail.com</a>
+          <a href="index.html#projetos" style="color:var(--campo-0);border-bottom:1px solid rgba(245,244,240,0.25);width:fit-content;padding-bottom:2px;transition:color .18s ease,border-color .18s ease,padding-bottom .18s ease" style-hover="color:var(--c-atencao);border-color:var(--c-atencao);padding-bottom:5px">← Voltar a todos os projetos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { navOpen: false };
+  renderVals() {
+    return {
+      navOpen: this.state.navOpen,
+      navIcon: this.state.navOpen ? '✕' : '☰',
+      toggleNav: () => this.setState(s => ({ navOpen: !s.navOpen })),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

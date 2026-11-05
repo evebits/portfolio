@@ -12,8 +12,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"></link>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&family=Barlow+Semi+Condensed:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"></link>
   <title>Pessoas que Transformam, Programa de Transformação Pública | Evelyn Bitencourt</title>
-  <meta name="description" content="Desenho de programa de melhoria de serviços públicos para a Prefeitura de São Paulo, com jornada modular, árvore de decisão e entregáveis de gestão. (011).lab · SMIT/PMSP · UNESCO."></meta>
+  <meta name="description" content="Desenho de programa de melhoria de serviços públicos para a Prefeitura de São Paulo, com jornada modular, árvore de decisão e entregáveis de gestão. (011).lab · SMIT, Prefeitura de São Paulo · UNESCO."></meta>
   <link rel="canonical" href="https://evelynsbitencourt.netlify.app/PessoasQueTransformam.html"></link>
+  <link rel="alternate" hreflang="pt-BR" href="https://evelynsbitencourt.netlify.app/PessoasQueTransformam.html"></link>
+  <link rel="alternate" hreflang="en" href="https://evelynsbitencourt.netlify.app/en/PessoasQueTransformam.html"></link>
+  <link rel="alternate" hreflang="x-default" href="https://evelynsbitencourt.netlify.app/PessoasQueTransformam.html"></link>
   <meta property="og:type" content="article"></meta>
   <meta property="og:title" content="Pessoas que Transformam, Programa de Transformação Pública"></meta>
   <meta property="og:description" content="Desenho de programa de melhoria de serviços públicos para a Prefeitura de São Paulo, com jornada modular."></meta>
@@ -33,12 +36,14 @@
     a:hover{color:#F2672A}
     img{max-width:100%}
     .hamburger{display:none}
+    .lang-mobile{display:none}
     @media (max-width:991.98px){
       .site-nav{display:none !important}
       .hamburger{display:flex !important}
-      header{grid-template-columns:1fr 44px !important;gap:16px !important}
+      header{grid-template-columns:1fr auto 44px !important;gap:12px !important}
+      .lang-mobile{display:flex !important;grid-column:2 !important}
       header>a{grid-column:1 !important;font-size:17px !important}
-      header>.hamburger{grid-column:2 !important}
+      header>.hamburger{grid-column:3 !important}
       header>nav{grid-column:1/-1 !important}
       .gwrap,section[style*="repeat(12"],footer[style*="repeat(12"]{grid-template-columns:repeat(2,1fr) !important}
       .gwrap>*,section[style*="repeat(12"]>*,footer[style*="repeat(12"]>*{grid-column:span 1 !important}
@@ -79,7 +84,9 @@
     <nav class="site-nav" aria-label="Navegação principal" style="grid-column:6/span 7;display:flex;gap:32px;justify-content:flex-end;align-items:center;font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em">
       <a href="index.html#projetos" style="color:var(--campo-0);opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">← Todos os projetos</a>
       <a href="index.html#contato" style="color:var(--campo-2);background:var(--c-atencao);padding:9px 18px;font-weight:600;opacity:1;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 4px 0 rgba(245,244,240,0.35)" style-active="transform:translateY(0);box-shadow:none">Contato</a>
+      <div class="lang-switch" role="group" aria-label="Idioma" style="display:flex;border:1px solid rgba(245,244,240,0.4);font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;"><a href="PessoasQueTransformam.html" hreflang="pt-BR" lang="pt-BR" aria-current="page" style="padding:7px 10px;background:var(--campo-0);color:var(--campo-2);font-weight:600;text-decoration:none">PT</a><a href="en/PessoasQueTransformam.html" hreflang="en" lang="en" aria-label="Read in English" style="padding:7px 10px;color:var(--campo-0);text-decoration:none;opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">EN</a></div>
     </nav>
+    <div class="lang-mobile" role="group" aria-label="Idioma" style="display:flex;border:1px solid rgba(245,244,240,0.4);font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;display:none;align-self:center"><a href="PessoasQueTransformam.html" hreflang="pt-BR" lang="pt-BR" aria-current="page" style="padding:7px 10px;background:var(--campo-0);color:var(--campo-2);font-weight:600;text-decoration:none">PT</a><a href="en/PessoasQueTransformam.html" hreflang="en" lang="en" aria-label="Read in English" style="padding:7px 10px;color:var(--campo-0);text-decoration:none;opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">EN</a></div>
     <button class="hamburger" onClick="{{ toggleNav }}" aria-label="Abrir menu de navegação" aria-expanded="{{ navOpen }}" aria-controls="mobile-nav" style="display:none;grid-column:12/span 1;justify-self:end;width:44px;height:44px;border:1px solid var(--campo-0);background:transparent;color:var(--campo-0);font-size:20px;line-height:1;align-items:center;justify-content:center;cursor:pointer;transition:background .18s ease,color .18s ease" style-hover="background:var(--campo-0);color:var(--campo-2)">{{ navIcon }}</button>
     <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
       <nav id="mobile-nav" aria-label="Navegação principal (móvel)" style="grid-column:1/-1;display:flex;flex-direction:column;padding:8px 0 4px;border-top:1px solid rgba(245,244,240,0.15);margin-top:16px;font-family:var(--ff-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.08em">
@@ -93,7 +100,7 @@
     <div class="hero-box gwrap" style="grid-column:1/span 12;border:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0);padding:48px;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);position:relative;overflow:hidden">
       <div style="position:absolute;left:0;top:0;bottom:0;width:10px;background:var(--c-atencao)"></div>
       <div style="grid-column:1/span 3;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;line-height:2;color:var(--campo-4)">
-        Instituição<b style="display:block;color:var(--campo-0);font-weight:500">(011).lab · SMIT/PMSP · UNESCO</b>
+        Instituição<b style="display:block;color:var(--campo-0);font-weight:500">(011).lab · SMIT, Prefeitura de São Paulo · UNESCO</b>
         Período<b style="display:block;color:var(--campo-0);font-weight:500">2023 · 3 meses</b>
         Escala<b style="display:block;color:var(--campo-0);font-weight:500">20+ produtos entregues</b>
         Função<b style="display:block;color:var(--campo-0);font-weight:500">Diagnóstico · jornada modular</b>
@@ -102,7 +109,7 @@
       <div style="grid-column:5/span 8">
         <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--c-atencao);margin-bottom:16px">Pessoas que Transformam</div>
         <h1 style="font-family:var(--ff-display);font-size:44px;line-height:0.92;letter-spacing:-0.02em;font-weight:900;margin:0 0 20px;text-transform:uppercase;overflow-wrap:anywhere">Uma árvore de decisão para orientar os projetos de transformação da cidade.</h1>
-        <p style="font-size:17px;line-height:1.55;max-width:620px;margin:0;opacity:0.88">Redesenho do programa de transformação pública da Prefeitura de São Paulo: diagnóstico qualitativo com servidores, jornada modular de oito etapas e árvore de decisão para encaminhar projetos de transformação pública.</p>
+        <p style="font-size:17px;line-height:1.55;max-width:620px;margin:0;opacity:0.88">Desenho do programa de melhoria de serviços públicos da Prefeitura de São Paulo: diagnóstico qualitativo com servidores, jornada modular de oito etapas e árvore de decisão para encaminhar projetos de transformação pública.</p>
       </div>
     </div>
   </section>
@@ -115,7 +122,7 @@
       <div style="grid-column:1/span 7;border:1px solid var(--campo-2);border-left:8px solid var(--c-atencao);padding:32px;background:var(--campo-0)">
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Meu papel</div>
         <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.05;margin-bottom:14px;text-transform:uppercase">Diagnóstico, jornada modular e cardápio de produtos.</h2>
-        <p style="font-size:14px;line-height:1.6;margin:0">Conduzi o diagnóstico qualitativo com servidores públicos para entender onde o programa de transformação da prefeitura travava, e redesenhei a jornada em oito etapas modulares, da ideia inicial ao projeto em execução, com uma árvore de decisão que direciona cada servidor ao produto certo conforme o estágio do seu projeto.</p>
+        <p style="font-size:14px;line-height:1.6;margin:0">Conduzi o diagnóstico qualitativo com servidores públicos para entender onde os projetos de transformação da prefeitura travavam, e desenhei a jornada em oito etapas modulares, da ideia inicial ao projeto em execução, com uma árvore de decisão que direciona cada servidor ao produto certo conforme o estágio do seu projeto.</p>
         <p style="margin-top:14px;color:var(--campo-3);font-size:14px">Mais de 20 produtos e ferramentas foram entregues como parte desse cardápio modular.</p>
       </div>
       <div style="grid-column:8/span 5;border:1px solid var(--campo-2);padding:24px;background:var(--c-atencao);color:var(--campo-2);display:flex;flex-direction:column;justify-content:space-between">
@@ -135,7 +142,7 @@
       <div style="grid-column:7/span 6;border:1px solid var(--campo-2);padding:32px;background:var(--campo-1)">
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Decisões</div>
         <h2 style="font-family:var(--ff-display);font-size:28px;line-height:1.05;text-transform:uppercase;margin:0 0 18px">Duas escolhas estruturaram o programa</h2>
-        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px"><li style="padding-left:18px;border-left:2px solid var(--c-atencao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Estrutura modular</b><span style="font-size:14px;line-height:1.6">As secretarias tinham níveis de maturidade muito diferentes. Um percurso único deixaria metade das equipes para trás. Os módulos permitem entrar no ponto certo em vez de começar todo mundo do zero.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-acao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Entregáveis de gestão, não só de design</b><span style="font-size:14px;line-height:1.6">Jornadas e blueprints não sobrevivem sozinhos dentro da máquina pública. Incluí plano de ação, cronograma com EAP base e plano de alocação de recursos humanos, para que a implementação tivesse dono, prazo e time.</span></li></ul>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px"><li style="padding-left:18px;border-left:2px solid var(--c-atencao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Estrutura modular</b><span style="font-size:14px;line-height:1.6">As secretarias tinham níveis de maturidade muito diferentes. Um percurso único deixaria metade das equipes para trás. Os módulos permitem entrar no ponto certo em vez de começar todo mundo do zero.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-acao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Entregáveis de gestão, não só de design</b><span style="font-size:14px;line-height:1.6">Jornadas e blueprints não sobrevivem sozinhos dentro da máquina pública. Incluí plano de ação, cronograma com estrutura analítica de projeto e plano de alocação de recursos humanos, para que a implementação tivesse dono, prazo e time.</span></li></ul>
       </div>
     </div>
   </section>

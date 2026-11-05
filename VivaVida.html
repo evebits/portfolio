@@ -14,6 +14,9 @@
   <title>Mapeamento Viva Vida, Pesquisa Qualitativa em Saúde Mental | Evelyn Bitencourt</title>
   <meta name="description" content="Estudo qualitativo aninhado em ensaio clínico randomizado: 55 entrevistas e 167 reuniões de observação participante sobre uma intervenção psicossocial via WhatsApp para idosos de baixa renda com sintomas depressivos."></meta>
   <link rel="canonical" href="https://evelynsbitencourt.netlify.app/VivaVida.html"></link>
+  <link rel="alternate" hreflang="pt-BR" href="https://evelynsbitencourt.netlify.app/VivaVida.html"></link>
+  <link rel="alternate" hreflang="en" href="https://evelynsbitencourt.netlify.app/en/VivaVida.html"></link>
+  <link rel="alternate" hreflang="x-default" href="https://evelynsbitencourt.netlify.app/VivaVida.html"></link>
   <meta property="og:type" content="article"></meta>
   <meta property="og:title" content="Mapeamento Viva Vida, Pesquisa Qualitativa em Saúde Mental"></meta>
   <meta property="og:description" content="Pesquisa qualitativa sobre intervenção psicossocial via WhatsApp para idosos com sintomas depressivos."></meta>
@@ -33,12 +36,14 @@
     a:hover{color:#F2672A}
     img{max-width:100%}
     .hamburger{display:none}
+    .lang-mobile{display:none}
     @media (max-width:991.98px){
       .site-nav{display:none !important}
       .hamburger{display:flex !important}
-      header{grid-template-columns:1fr 44px !important;gap:16px !important}
+      header{grid-template-columns:1fr auto 44px !important;gap:12px !important}
+      .lang-mobile{display:flex !important;grid-column:2 !important}
       header>a{grid-column:1 !important;font-size:17px !important}
-      header>.hamburger{grid-column:2 !important}
+      header>.hamburger{grid-column:3 !important}
       header>nav{grid-column:1/-1 !important}
       .gwrap,section[style*="repeat(12"],footer[style*="repeat(12"]{grid-template-columns:repeat(2,1fr) !important}
       .gwrap>*,section[style*="repeat(12"]>*,footer[style*="repeat(12"]>*{grid-column:span 1 !important}
@@ -79,7 +84,9 @@
     <nav class="site-nav" aria-label="Navegação principal" style="grid-column:6/span 7;display:flex;gap:32px;justify-content:flex-end;align-items:center;font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em">
       <a href="index.html#projetos" style="color:var(--campo-0);opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">← Todos os projetos</a>
       <a href="index.html#contato" style="color:var(--campo-2);background:var(--c-atencao);padding:9px 18px;font-weight:600;opacity:1;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 4px 0 rgba(245,244,240,0.35)" style-active="transform:translateY(0);box-shadow:none">Contato</a>
+      <div class="lang-switch" role="group" aria-label="Idioma" style="display:flex;border:1px solid rgba(245,244,240,0.4);font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;"><a href="VivaVida.html" hreflang="pt-BR" lang="pt-BR" aria-current="page" style="padding:7px 10px;background:var(--campo-0);color:var(--campo-2);font-weight:600;text-decoration:none">PT</a><a href="en/VivaVida.html" hreflang="en" lang="en" aria-label="Read in English" style="padding:7px 10px;color:var(--campo-0);text-decoration:none;opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">EN</a></div>
     </nav>
+    <div class="lang-mobile" role="group" aria-label="Idioma" style="display:flex;border:1px solid rgba(245,244,240,0.4);font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;display:none;align-self:center"><a href="VivaVida.html" hreflang="pt-BR" lang="pt-BR" aria-current="page" style="padding:7px 10px;background:var(--campo-0);color:var(--campo-2);font-weight:600;text-decoration:none">PT</a><a href="en/VivaVida.html" hreflang="en" lang="en" aria-label="Read in English" style="padding:7px 10px;color:var(--campo-0);text-decoration:none;opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">EN</a></div>
     <button class="hamburger" onClick="{{ toggleNav }}" aria-label="Abrir menu de navegação" aria-expanded="{{ navOpen }}" aria-controls="mobile-nav" style="display:none;grid-column:12/span 1;justify-self:end;width:44px;height:44px;border:1px solid var(--campo-0);background:transparent;color:var(--campo-0);font-size:20px;line-height:1;align-items:center;justify-content:center;cursor:pointer;transition:background .18s ease,color .18s ease" style-hover="background:var(--campo-0);color:var(--campo-2)">{{ navIcon }}</button>
     <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
       <nav id="mobile-nav" aria-label="Navegação principal (móvel)" style="grid-column:1/-1;display:flex;flex-direction:column;padding:8px 0 4px;border-top:1px solid rgba(245,244,240,0.15);margin-top:16px;font-family:var(--ff-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.08em">
@@ -93,7 +100,7 @@
     <div class="hero-box gwrap" style="grid-column:1/span 12;border:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0);padding:48px;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);position:relative;overflow:hidden">
       <div style="position:absolute;left:0;top:0;bottom:0;width:10px;background:var(--c-acao)"></div>
       <div style="grid-column:1/span 3;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;line-height:2;color:var(--campo-4)">
-        Instituição<b style="display:block;color:var(--campo-0);font-weight:500">FAUUSP · IPq-HCFMUSP · King's College</b>
+        Instituição<b style="display:block;color:var(--campo-0);font-weight:500">FAUUSP · Instituto de Psiquiatria, HCFMUSP · King's College London</b>
         Período<b style="display:block;color:var(--campo-0);font-weight:500">2021-2024 · 20 meses de campo</b>
         Escala<b style="display:block;color:var(--campo-0);font-weight:500">55 entrevistas · 167 reuniões observadas</b>
         Função<b style="display:block;color:var(--campo-0);font-weight:500">Pesquisa qualitativa · dissertação de mestrado</b>
@@ -121,13 +128,13 @@
       </div>
       <div style="grid-column:1/span 7">
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Problema de pesquisa</div>
-        <h2 style="font-family:var(--ff-display);font-size:32px;line-height:1.02;letter-spacing:-0.02em;text-transform:uppercase;margin:0 0 14px">O ensaio clínico media se funcionava. Ninguém tinha perguntado como era usar.</h2>
-        <p style="font-size:15px;line-height:1.6;margin:0">Tecnologias digitais de saúde mental se popularizam, mas costumam ser inacessíveis para idosos de baixa renda por custo, dificuldade de uso e falta de engajamento. O Viva Vida rodava como ensaio clínico randomizado com mais de mil participantes recrutados, com desfecho clínico medido por PHQ-9. O que não existia era evidência qualitativa sobre a experiência: quais componentes do serviço funcionavam, onde a jornada quebrava e quem, além do usuário, sustentava o acesso.</p>
+        <h2 style="font-family:var(--ff-display);font-size:32px;line-height:1.02;letter-spacing:-0.02em;text-transform:uppercase;margin:0 0 14px">Como é receber terapia por mensagem quando o celular é do seu filho?</h2>
+        <p style="font-size:15px;line-height:1.6;margin:0">Tecnologias digitais de saúde mental se popularizam, mas costumam ser inacessíveis para idosos de baixa renda por custo, dificuldade de uso e falta de engajamento. O Viva Vida rodava como ensaio clínico randomizado com mais de mil participantes recrutados, com desfecho clínico medido pelo PHQ-9 (Patient Health Questionnaire-9), questionário validado de rastreio de depressão. O que não existia era evidência qualitativa sobre a experiência: quais componentes do serviço funcionavam, onde a jornada quebrava e quem, além do usuário, sustentava o acesso.</p>
       </div>
       <div style="grid-column:9/span 4;border:1px solid var(--campo-2);border-left:8px solid var(--c-acao);padding:32px;background:var(--campo-0)">
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Meu papel</div>
         <h2 style="font-family:var(--ff-display);font-size:23px;line-height:1.05;text-transform:uppercase;margin:0 0 14px">Pesquisadora responsável, dentro da equipe do ensaio</h2>
-        <p style="font-size:14px;line-height:1.6;margin:0">Desenhei o estudo qualitativo, os roteiros e os três livros de código; conduzi entrevistas junto a outros quatro entrevistadores; fiz toda a codificação, a síntese em jornadas e o mapa de atores. A operação do ensaio clínico e a intervenção em si eram do grupo de pesquisa do IPq.</p>
+        <p style="font-size:14px;line-height:1.6;margin:0">Desenhei o estudo qualitativo, os roteiros e os três livros de código; conduzi entrevistas junto a outros quatro entrevistadores; fiz toda a codificação, a síntese em jornadas e o mapa de atores. A operação do ensaio clínico e a intervenção em si eram do grupo de pesquisa do Instituto de Psiquiatria do hospital.</p>
       </div>
     </div>
   </section>
@@ -137,8 +144,8 @@
       <div style="grid-column:1/span 5">
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Desenho de pesquisa</div>
         <h2 style="font-family:var(--ff-display);font-size:30px;line-height:1.02;letter-spacing:-0.01em;text-transform:uppercase;margin:0 0 14px">Duas fontes, dois momentos, um livro de código por pergunta</h2>
-        <p style="font-size:15px;line-height:1.6;margin:0 0 14px">Abordagem qualitativa descritiva de base construtivista, relatada segundo o COREQ. Entrevistas semiestruturadas por telefone com roteiro testado em piloto, mais observação participante contínua da equipe que criou e operou a intervenção.</p>
-        <p style="font-size:14px;line-height:1.6;margin:0;color:var(--campo-3)">Aprovado pelo comitê de ética do HCFMUSP e registrado no ReBEC como parte do protocolo do ensaio clínico. Transcrição assistida por ferramenta e revisada por transcritores; codificação temática dedutiva no Atlas.TI, seguindo Bardin, a partir de um livro de código para cada uma das três perguntas de pesquisa.</p>
+        <p style="font-size:15px;line-height:1.6;margin:0 0 14px">Abordagem qualitativa descritiva de base construtivista, relatada segundo o COREQ (Consolidated Criteria for Reporting Qualitative Research), checklist internacional para relato de pesquisa qualitativa. Entrevistas semiestruturadas por telefone com roteiro testado em piloto, mais observação participante contínua da equipe que criou e operou a intervenção.</p>
+        <p style="font-size:14px;line-height:1.6;margin:0;color:var(--campo-3)">Aprovado pelo comitê de ética do Hospital das Clínicas da Faculdade de Medicina da USP (HCFMUSP) e registrado no Registro Brasileiro de Ensaios Clínicos como parte do protocolo do ensaio clínico. Transcrição assistida por ferramenta e revisada por transcritores; codificação temática dedutiva no Atlas.TI, seguindo Bardin, a partir de um livro de código para cada uma das três perguntas de pesquisa.</p>
       </div>
       <div style="grid-column:7/span 6;border:1px solid var(--campo-2);padding:32px;background:var(--campo-1)">
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Amostragem</div>
@@ -166,7 +173,7 @@
       </div>
       <div style="grid-column:1/span 12;border:1px solid var(--campo-2);padding:28px;background:var(--campo-0)">
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Quem é essa população</div>
-        <p style="font-size:14px;line-height:1.7;margin:0;max-width:960px">Entre os participantes do programa, 66,1% tinham renda igual ou inferior a um salário mínimo e 74,7% cursaram apenas o ensino fundamental. A faixa predominante era 60-69 anos (84,2%); 69,5% relataram hipertensão e 41,3% diabetes. Todos com cadastro em unidade básica de saúde do SUS. Recrutar aqui não é recrutar usuário de app: parte do meu trabalho de campo foi acompanhar 63 ligações de recrutamento, das quais 9 resultaram em participação.</p>
+        <p style="font-size:14px;line-height:1.7;margin:0;max-width:960px">Entre os participantes do programa, 66,1% tinham renda igual ou inferior a um salário mínimo e 74,7% cursaram apenas o ensino fundamental. A faixa predominante era 60-69 anos (84,2%); 69,5% relataram hipertensão e 41,3% diabetes. Todos com cadastro em unidade básica de saúde do Sistema Único de Saúde (SUS). Recrutar aqui não é recrutar usuário de app: parte do meu trabalho de campo foi acompanhar 63 ligações de recrutamento, das quais 9 resultaram em participação.</p>
       </div>
     </div>
   </section>
@@ -185,7 +192,7 @@
         </div>
         <div style="border:1px solid var(--campo-2);padding:28px;background:var(--campo-1)">
           <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--c-decisao);margin-bottom:14px">§ O que falhou</div>
-          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px"><li style="padding-left:18px;border-left:2px solid var(--c-decisao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Enquetes por WhatsApp</b><span style="font-size:14px;line-height:1.6">Pain point mais agudo. Causaram medo em participantes com baixa literacia digital, que não sabiam o que aconteceria ao tocar numa opção.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-decisao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Imagens estáticas</b><span style="font-size:14px;line-height:1.6">Baixa retenção, especialmente entre participantes com sintomas mais graves. Perda de acuidade visual e tamanho de texto abaixo do recomendado para a faixa etária.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-decisao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">A primeira mensagem</b><span style="font-size:14px;line-height:1.6">Chegar como desconhecido no WhatsApp acionou o repertório de golpe: participantes bloquearam, ignoraram, foram checar na UBS ou pediram para o filho pesquisar na internet.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-decisao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Expectativa de resposta</b><span style="font-size:14px;line-height:1.6">O canal cria expectativa de conversa. Participantes mandaram figurinhas de bom dia para o programa e ficaram esperando resposta que nunca vinha.</span></li></ul>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px"><li style="padding-left:18px;border-left:2px solid var(--c-decisao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Enquetes por WhatsApp</b><span style="font-size:14px;line-height:1.6">Pain point mais agudo. Causaram medo em participantes com baixa literacia digital, que não sabiam o que aconteceria ao tocar numa opção.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-decisao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Imagens estáticas</b><span style="font-size:14px;line-height:1.6">Baixa retenção, especialmente entre participantes com sintomas mais graves. Perda de acuidade visual e tamanho de texto abaixo do recomendado para a faixa etária.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-decisao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">A primeira mensagem</b><span style="font-size:14px;line-height:1.6">Chegar como desconhecido no WhatsApp acionou o repertório de golpe: participantes bloquearam, ignoraram, foram checar na unidade básica de saúde ou pediram para o filho pesquisar na internet.</span></li><li style="padding-left:18px;border-left:2px solid var(--c-decisao)"><b style="display:block;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-3);margin-bottom:4px">Expectativa de resposta</b><span style="font-size:14px;line-height:1.6">O canal cria expectativa de conversa. Participantes mandaram figurinhas de bom dia para o programa e ficaram esperando resposta que nunca vinha.</span></li></ul>
         </div>
       </div>
       <div class="quote-grid" style="grid-column:1/span 12;padding:36px 44px;border:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0);display:grid;grid-template-columns:60px 1fr 220px;gap:28px;align-items:center">
@@ -214,7 +221,7 @@
       <div style="grid-column:span 4;border:1px solid var(--campo-2);border-top:8px solid var(--c-inter);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
         <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-inter)">Fase 02</div>
         <h3 style="font-family:var(--ff-display);font-size:19px;text-transform:uppercase;letter-spacing:-0.01em;margin:0">O convite</h3>
-        <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Mensagem de desconhecido no WhatsApp, seguida de ligação horas depois. Mistura de desconfiança e curiosidade; verificação na UBS ou com familiares.</p>
+        <p style="font-size:13px;line-height:1.55;margin:0;color:var(--campo-3)">Mensagem de desconhecido no WhatsApp, seguida de ligação horas depois. Mistura de desconfiança e curiosidade; verificação na unidade básica de saúde ou com familiares.</p>
       </div>
       <div style="grid-column:span 4;border:1px solid var(--campo-2);border-top:8px solid var(--c-humano);padding:24px;background:var(--campo-0);display:flex;flex-direction:column;gap:8px">
         <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-humano)">Fase 03</div>

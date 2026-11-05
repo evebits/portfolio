@@ -14,6 +14,9 @@
   <title>In.spire, Discovery do Agendamento de Exames de Imagem | Evelyn Bitencourt</title>
   <meta name="description" content="Discovery do serviço de agendamento de exames de imagem em hospital terciário do SUS, do mapa de dores ao Estudo Técnico Preliminar e roadmap de aquisição."></meta>
   <link rel="canonical" href="https://evelynsbitencourt.netlify.app/InSpireInRad.html"></link>
+  <link rel="alternate" hreflang="pt-BR" href="https://evelynsbitencourt.netlify.app/InSpireInRad.html"></link>
+  <link rel="alternate" hreflang="en" href="https://evelynsbitencourt.netlify.app/en/InSpireInRad.html"></link>
+  <link rel="alternate" hreflang="x-default" href="https://evelynsbitencourt.netlify.app/InSpireInRad.html"></link>
   <meta property="og:type" content="article"></meta>
   <meta property="og:title" content="In.spire, Discovery do Agendamento de Exames de Imagem"></meta>
   <meta property="og:description" content="Discovery do agendamento de exames de imagem em hospital terciário do SUS, do mapa de dores ao ETP."></meta>
@@ -33,12 +36,14 @@
     a:hover{color:#F2672A}
     img{max-width:100%}
     .hamburger{display:none}
+    .lang-mobile{display:none}
     @media (max-width:991.98px){
       .site-nav{display:none !important}
       .hamburger{display:flex !important}
-      header{grid-template-columns:1fr 44px !important;gap:16px !important}
+      header{grid-template-columns:1fr auto 44px !important;gap:12px !important}
+      .lang-mobile{display:flex !important;grid-column:2 !important}
       header>a{grid-column:1 !important;font-size:17px !important}
-      header>.hamburger{grid-column:2 !important}
+      header>.hamburger{grid-column:3 !important}
       header>nav{grid-column:1/-1 !important}
       .gwrap,section[style*="repeat(12"],footer[style*="repeat(12"]{grid-template-columns:repeat(2,1fr) !important}
       .gwrap>*,section[style*="repeat(12"]>*,footer[style*="repeat(12"]>*{grid-column:span 1 !important}
@@ -79,7 +84,9 @@
     <nav class="site-nav" aria-label="Navegação principal" style="grid-column:6/span 7;display:flex;gap:32px;justify-content:flex-end;align-items:center;font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em">
       <a href="index.html#projetos" style="color:var(--campo-0);opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">← Todos os projetos</a>
       <a href="index.html#contato" style="color:var(--campo-2);background:var(--c-atencao);padding:9px 18px;font-weight:600;opacity:1;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 4px 0 rgba(245,244,240,0.35)" style-active="transform:translateY(0);box-shadow:none">Contato</a>
+      <div class="lang-switch" role="group" aria-label="Idioma" style="display:flex;border:1px solid rgba(245,244,240,0.4);font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;"><a href="InSpireInRad.html" hreflang="pt-BR" lang="pt-BR" aria-current="page" style="padding:7px 10px;background:var(--campo-0);color:var(--campo-2);font-weight:600;text-decoration:none">PT</a><a href="en/InSpireInRad.html" hreflang="en" lang="en" aria-label="Read in English" style="padding:7px 10px;color:var(--campo-0);text-decoration:none;opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">EN</a></div>
     </nav>
+    <div class="lang-mobile" role="group" aria-label="Idioma" style="display:flex;border:1px solid rgba(245,244,240,0.4);font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;display:none;align-self:center"><a href="InSpireInRad.html" hreflang="pt-BR" lang="pt-BR" aria-current="page" style="padding:7px 10px;background:var(--campo-0);color:var(--campo-2);font-weight:600;text-decoration:none">PT</a><a href="en/InSpireInRad.html" hreflang="en" lang="en" aria-label="Read in English" style="padding:7px 10px;color:var(--campo-0);text-decoration:none;opacity:0.8;transition:opacity .18s ease,color .18s ease" style-hover="opacity:1;color:var(--c-atencao)">EN</a></div>
     <button class="hamburger" onClick="{{ toggleNav }}" aria-label="Abrir menu de navegação" aria-expanded="{{ navOpen }}" aria-controls="mobile-nav" style="display:none;grid-column:12/span 1;justify-self:end;width:44px;height:44px;border:1px solid var(--campo-0);background:transparent;color:var(--campo-0);font-size:20px;line-height:1;align-items:center;justify-content:center;cursor:pointer;transition:background .18s ease,color .18s ease" style-hover="background:var(--campo-0);color:var(--campo-2)">{{ navIcon }}</button>
     <sc-if value="{{ navOpen }}" hint-placeholder-val="{{ false }}">
       <nav id="mobile-nav" aria-label="Navegação principal (móvel)" style="grid-column:1/-1;display:flex;flex-direction:column;padding:8px 0 4px;border-top:1px solid rgba(245,244,240,0.15);margin-top:16px;font-family:var(--ff-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.08em">
@@ -93,7 +100,7 @@
     <div class="hero-box gwrap" style="grid-column:1/span 12;border:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0);padding:48px;display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter);position:relative;overflow:hidden">
       <div style="position:absolute;left:0;top:0;bottom:0;width:10px;background:var(--c-inter)"></div>
       <div style="grid-column:1/span 3;font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;line-height:2;color:var(--campo-4)">
-        Instituição<b style="display:block;color:var(--campo-0);font-weight:500">InovaHC · InRad, HCFMUSP</b>
+        Instituição<b style="display:block;color:var(--campo-0);font-weight:500">InovaHC · Instituto de Radiologia (InRad), HCFMUSP</b>
         Período<b style="display:block;color:var(--campo-0);font-weight:500">2025 · 4 meses</b>
         Escala<b style="display:block;color:var(--campo-0);font-weight:500">+30 entrevistas · 11 perfis · 470 códigos</b>
         Função<b style="display:block;color:var(--campo-0);font-weight:500">Discovery de serviço + viabilização</b>
@@ -102,7 +109,7 @@
       <div style="grid-column:5/span 8">
         <div style="font-family:var(--ff-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--c-atencao);margin-bottom:16px">In.spire agendamento de exames de imagem</div>
         <h1 style="font-family:var(--ff-display);font-size:44px;line-height:0.92;letter-spacing:-0.02em;font-weight:900;margin:0 0 20px;text-transform:uppercase;overflow-wrap:anywhere">Da fila de espera do paciente ao <span style="color:var(--c-atencao)">edital de contratação</span>.</h1>
-        <p style="font-size:17px;line-height:1.55;max-width:620px;margin:0;opacity:0.88">Discovery do serviço de agendamento de exames de imagem de um hospital terciário do SUS, estruturado em três marcos: experiência, mercado e viabilização. Termina em Estudo Técnico Preliminar e roadmap de aquisição, não em relatório.</p>
+        <p style="font-size:17px;line-height:1.55;max-width:620px;margin:0;opacity:0.88">Discovery do serviço de agendamento de exames de imagem de um hospital terciário do Sistema Único de Saúde (SUS), estruturado em três marcos: experiência, mercado e viabilização. Termina em Estudo Técnico Preliminar e roadmap de aquisição, não em relatório.</p>
       </div>
     </div>
   </section>
@@ -147,7 +154,7 @@
         </div>
         <div style="border:1px solid var(--campo-2);padding:24px;background:var(--campo-0);color:var(--campo-2);display:flex;flex-direction:column;justify-content:space-between;min-height:150px">
           <div style="font-family:var(--ff-display);font-size:44px;line-height:0.9;font-weight:900;letter-spacing:-0.03em">4</div>
-          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;opacity:0.82">Blueprints de jornada: SUS-HC, SUS regulado, suplementar e pesquisa</div>
+          <div style="font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:0.08em;margin-top:10px;line-height:1.5;opacity:0.82">Blueprints de jornada: SUS do próprio hospital, SUS regulado pelo estado, saúde suplementar e pesquisa</div>
         </div>
       </div>
       <div class="gwrap" style="grid-column:1/span 12;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gutter)">
@@ -190,7 +197,7 @@
       </div>
       <div class="quote-grid" style="grid-column:1/span 12;padding:36px 44px;border:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0);display:grid;grid-template-columns:60px 1fr 220px;gap:28px;align-items:center">
         <div style="font-family:var(--ff-display);font-size:64px;line-height:0.7;color:var(--c-atencao);font-weight:900">"</div>
-        <div style="font-family:var(--ff-display);font-size:23px;line-height:1.22;font-weight:700;letter-spacing:-0.005em">Se o Interad e o MV fossem mais integrados, qualquer alteração feita no MV já refletiria no Interad automaticamente, reduzindo erros e tempo gasto.</div>
+        <div style="font-family:var(--ff-display);font-size:23px;line-height:1.22;font-weight:700;letter-spacing:-0.005em">Se o Interad e o MV [prontuário eletrônico] fossem mais integrados, qualquer alteração feita no MV já refletiria no Interad automaticamente, reduzindo erros e tempo gasto.</div>
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--campo-4);line-height:1.7;text-align:right">Profissional do agendamento<br/>·<br/>entrevista, marco de experiência</div>
       </div>
       <div class="quote-grid" style="grid-column:1/span 12;padding:36px 44px;border:1px solid var(--campo-2);background:var(--campo-2);color:var(--campo-0);display:grid;grid-template-columns:60px 1fr 220px;gap:28px;align-items:center">
@@ -210,7 +217,7 @@
     <div class="gwrap" style="display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gutter)">
       <div style="grid-column:1/span 7">
         <div style="font-family:var(--ff-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--campo-3);margin-bottom:12px">§ Decisão</div>
-        <h2 style="font-family:var(--ff-display);font-size:32px;line-height:1.02;text-transform:uppercase;letter-spacing:-0.02em;margin:0 0 14px">Não existe bala de prata, e nem tudo se resolve com tecnologia.</h2>
+        <h2 style="font-family:var(--ff-display);font-size:32px;line-height:1.02;text-transform:uppercase;letter-spacing:-0.02em;margin:0 0 14px">«Não existe bala de prata, e nem tudo se resolve com tecnologia.»</h2>
         <p style="font-size:15px;line-height:1.6;margin:0">Essa foi a premissa que abriu a oficina de viabilização. A saída fácil seria recomendar uma plataforma única que resolvesse os 470 códigos de uma vez. Em vez disso, priorizamos por matriz de esforço e impacto e separamos o que é compra de tecnologia do que é decisão de governança, porque parte das dores mais caras, o modelo de faturamento entre institutos e a gestão do parque de equipamentos, nenhum fornecedor resolve.</p>
       </div>
       <div style="grid-column:9/span 4;border:1px solid var(--campo-2);padding:32px;background:var(--campo-1)">
@@ -239,7 +246,7 @@
         <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-humano)">Problema 2</div>
         <h3 style="font-family:var(--ff-display);font-size:21px;text-transform:uppercase;letter-spacing:-0.01em;margin:0">Comunicação com pacientes</h3>
         <p style="font-size:13px;line-height:1.6;margin:0">Paciente não consegue reagendar remotamente, não encontra canal que responda e recebe mensagem de preparo incorreta, o que gera absenteísmo e reagendamento.</p>
-        <p style="font-size:13px;line-height:1.6;margin:0;color:var(--campo-3);border-top:1px solid var(--campo-4);padding-top:12px"><b style="font-family:var(--ff-mono);font-size:9px;letter-spacing:0.08em;text-transform:uppercase;display:block;margin-bottom:4px">Direção proposta</b>Plataforma única de comunicação e autoatendimento para os três fluxos, com IA para orientações básicas. Cenário: avaliar inovação aberta e adaptação de solução de mercado.</p>
+        <p style="font-size:13px;line-height:1.6;margin:0;color:var(--campo-3);border-top:1px solid var(--campo-4);padding-top:12px"><b style="font-family:var(--ff-mono);font-size:9px;letter-spacing:0.08em;text-transform:uppercase;display:block;margin-bottom:4px">Direção proposta</b>Plataforma única de comunicação e autoatendimento para os três fluxos, com inteligência artificial (IA) para orientações básicas. Cenário: avaliar inovação aberta e adaptação de solução de mercado.</p>
       </div>
       <div style="grid-column:span 4;border:1px solid var(--campo-2);border-left:8px solid var(--c-acao);padding:28px;background:var(--campo-0);display:flex;flex-direction:column;gap:12px">
         <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-acao)">Problema 3</div>
